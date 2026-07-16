@@ -1,0 +1,20 @@
+model:
+  base: "Qwen2.5-Coder-7B-Instruct"
+  quantization: "4bit"
+
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj"]
+
+training:
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  gradient_checkpointing: true
+  learning_rate: 2e-4
+  num_epochs: 3
+  max_seq_length: 2048
+
+logging:
+  wandb_project: "agent-distillation-compiler"
