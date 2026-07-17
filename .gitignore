@@ -17,7 +17,7 @@ models/
 *.safetensors
 
 # Dataset caches
-datasets/raw/
+
 *.jsonl
 
 # Logs & run outputs
