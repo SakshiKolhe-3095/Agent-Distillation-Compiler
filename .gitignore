@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Virtual environment
+adc/
+
+# Environment / secrets
+.env
+
+# Model artifacts
+models/
+*.gguf
+*.safetensors
+
+# Dataset caches
+datasets/raw/
+*.jsonl
+
+# Logs & run outputs
+logs/
+results.json
+wandb/
+
+# W&B
+*.log
+
+# OS / editor
+.vscode/
+.DS_Store
+Thumbs.db
