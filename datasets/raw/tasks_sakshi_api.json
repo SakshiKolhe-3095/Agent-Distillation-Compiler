@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "mbpp_194",
+    "source": "mbpp",
+    "problem": "Write a function to find the n - cheap price items from a given dataset using heap queue algorithm.",
+    "test": [
+      "assert cheap_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}],1)==[{'name': 'Item-1', 'price': 101.1}]",
+      "assert cheap_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}],2)==[{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}]",
+      "assert cheap_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}, {'name': 'Item-3', 'price': 45.09},{'name': 'Item-4', 'price': 22.75}],1)==[{'name': 'Item-4', 'price': 22.75}]"
+    ]
+  },
+  {
+    "id": "mbpp_195",
+    "source": "mbpp",
+    "problem": "Write function to find the sum of all items in the given dictionary.",
+    "test": [
+      "assert return_sum({'a': 100, 'b':200, 'c':300}) == 600",
+      "assert return_sum({'a': 25, 'b':18, 'c':45}) == 88",
+      "assert return_sum({'a': 36, 'b':39, 'c':49}) == 124"
+    ]
+  },
+  {
+    "id": "mbpp_196",
+    "source": "mbpp",
+    "problem": "Write a python function to find the sum of all odd natural numbers within the range l and r.",
+    "test": [
+      "assert sum_in_Range(2,5) == 8",
+      "assert sum_in_Range(5,7) == 12",
+      "assert sum_in_Range(7,13) == 40"
+    ]
+  },
+  {
+    "id": "mbpp_197",
+    "source": "mbpp",
+    "problem": "Write a python function to find the sum of an array.",
+    "test": [
+      "assert _sum([1, 2, 3]) == 6",
+      "assert _sum([15, 12, 13, 10]) == 50",
+      "assert _sum([0, 1, 2]) == 3"
+    ]
+  },
+  {
+    "id": "mbpp_198",
+    "source": "mbpp",
+    "problem": "Write a python function to left rotate the bits of a given number.",
+    "test": [
+      "assert left_Rotate(16,2) == 64",
+      "assert left_Rotate(10,2) == 40",
+      "assert left_Rotate(99,3) == 792"
+    ]
+  },
+  {
+    "id": "mbpp_199",
+    "source": "mbpp",
+    "problem": "Write a function to remove all whitespaces from a string.",
+    "test": [
+      "assert remove_all_spaces('python  program')==('pythonprogram')",
+      "assert remove_all_spaces('python   programming    language')==('pythonprogramminglanguage')",
+      "assert remove_all_spaces('python                     program')==('pythonprogram')"
+    ]
+  },
+  {
+    "id": "mbpp_200",
+    "source": "mbpp",
+    "problem": "Write a python function to count the number of equal numbers from three given integers.",
+    "test": [
+      "assert test_three_equal(1,1,1) == 3",
+      "assert test_three_equal(-1,-2,-3) == 0",
+      "assert test_three_equal(1,2,2) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_201",
+    "source": "mbpp",
+    "problem": "Write a python function to count the number of rotations required to generate a sorted array.",
+    "test": [
+      "assert count_Rotation([3,2,1],3) == 1",
+      "assert count_Rotation([4,5,1,2,3],5) == 2",
+      "assert count_Rotation([7,8,9,1,2,3],6) == 3"
+    ]
+  },
+  {
+    "id": "mbpp_202",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the given number is a perfect square or not.",
+    "test": [
+      "assert is_Perfect_Square(10) == False",
+      "assert is_Perfect_Square(36) == True",
+      "assert is_Perfect_Square(14) == False"
+    ]
+  },
+  {
+    "id": "mbpp_203",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the product of numbers is even or not.",
+    "test": [
+      "assert is_Product_Even([1,2,3],3) == True",
+      "assert is_Product_Even([1,2,1,4],4) == True",
+      "assert is_Product_Even([1,1],2) == False"
+    ]
+  },
+  {
+    "id": "mbpp_204",
+    "source": "mbpp",
+    "problem": "Write a function to find the list in a list of lists whose sum of elements is the highest.",
+    "test": [
+      "assert max_sum_list([[1,2,3], [4,5,6], [10,11,12], [7,8,9]])==[10, 11, 12] ",
+      "assert max_sum_list([[3,2,1], [6,5,4], [12,11,10]])==[12,11,10] ",
+      "assert max_sum_list([[2,3,1]])==[2,3,1] "
+    ]
+  },
+  {
+    "id": "mbpp_205",
+    "source": "mbpp",
+    "problem": "Write a function to find maximum run of uppercase characters in the given string.",
+    "test": [
+      "assert max_run_uppercase('GeMKSForGERksISBESt') == 5",
+      "assert max_run_uppercase('PrECIOusMOVemENTSYT') == 6",
+      "assert max_run_uppercase('GooGLEFluTTER') == 4"
+    ]
+  },
+  {
+    "id": "mbpp_206",
+    "source": "mbpp",
+    "problem": "Write a python function to find the first odd number in a given list of numbers.",
+    "test": [
+      "assert first_odd([1,3,5]) == 1",
+      "assert first_odd([2,4,1,3]) == 1",
+      "assert first_odd ([8,9,1]) == 9"
+    ]
+  },
+  {
+    "id": "mbpp_207",
+    "source": "mbpp",
+    "problem": "Write a function to check if the given tuples contain the k or not.",
+    "test": [
+      "assert check_K((10, 4, 5, 6, 8), 6) == True",
+      "assert check_K((1, 2, 3, 4, 5, 6), 7) == False",
+      "assert check_K((7, 8, 9, 44, 11, 12), 11) == True"
+    ]
+  },
+  {
+    "id": "mbpp_208",
+    "source": "mbpp",
+    "problem": "Write a function to check if each element of second tuple is smaller than its corresponding index in first tuple.",
+    "test": [
+      "assert check_smaller((1, 2, 3), (2, 3, 4)) == False",
+      "assert check_smaller((4, 5, 6), (3, 4, 5)) == True",
+      "assert check_smaller((11, 12, 13), (10, 11, 12)) == True"
+    ]
+  },
+  {
+    "id": "mbpp_209",
+    "source": "mbpp",
+    "problem": "Write a function to iterate over elements repeating each as many times as its count.",
+    "test": [
+      "assert count_variable(4,2,0,-2)==['p', 'p', 'p', 'p', 'q', 'q'] ",
+      "assert count_variable(0,1,2,3)==['q', 'r', 'r', 's', 's', 's'] ",
+      "assert count_variable(11,15,12,23)==['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's']"
+    ]
+  },
+  {
+    "id": "mbpp_210",
+    "source": "mbpp",
+    "problem": "Write a function to check if two lists of tuples are identical or not.",
+    "test": [
+      "assert check_identical([(10, 4), (2, 5)], [(10, 4), (2, 5)]) == True",
+      "assert check_identical([(1, 2), (3, 7)], [(12, 14), (12, 45)]) == False",
+      "assert check_identical([(2, 14), (12, 25)], [(2, 14), (12, 25)]) == True"
+    ]
+  },
+  {
+    "id": "mbpp_211",
+    "source": "mbpp",
+    "problem": "Write a function to abbreviate 'road' as 'rd.' in a given string.",
+    "test": [
+      "assert road_rd(\"ravipadu Road\")==('ravipadu Rd.')",
+      "assert road_rd(\"palnadu Road\")==('palnadu Rd.')",
+      "assert road_rd(\"eshwar enclave Road\")==('eshwar enclave Rd.')"
+    ]
+  },
+  {
+    "id": "mbpp_212",
+    "source": "mbpp",
+    "problem": "Write a function to find length of the string.",
+    "test": [
+      "assert string_length('python')==6",
+      "assert string_length('program')==7",
+      "assert string_length('language')==8"
+    ]
+  },
+  {
+    "id": "mbpp_213",
+    "source": "mbpp",
+    "problem": "Write a function to find the area of a rombus.",
+    "test": [
+      "assert rombus_area(10,20)==100",
+      "assert rombus_area(10,5)==25",
+      "assert rombus_area(4,2)==4"
+    ]
+  },
+  {
+    "id": "mbpp_214",
+    "source": "mbpp",
+    "problem": "Write a function to sort the given array without using any sorting algorithm. the given array consists of only 0, 1, and 2.",
+    "test": [
+      "assert sort_by_dnf([1,2,0,1,0,1,2,1,1], 9) == [0, 0, 1, 1, 1, 1, 1, 2, 2]",
+      "assert sort_by_dnf([1,0,0,1,2,1,2,2,1,0], 10) == [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]",
+      "assert sort_by_dnf([2,2,1,0,0,0,1,1,2,1], 10) == [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]"
+    ]
+  },
+  {
+    "id": "mbpp_215",
+    "source": "mbpp",
+    "problem": "Write a function to clear the values of the given tuples.",
+    "test": [
+      "assert clear_tuple((1, 5, 3, 6, 8)) == ()",
+      "assert clear_tuple((2, 1, 4 ,5 ,6)) == ()",
+      "assert clear_tuple((3, 2, 5, 6, 8)) == ()"
+    ]
+  },
+  {
+    "id": "mbpp_216",
+    "source": "mbpp",
+    "problem": "Write a function to find numbers divisible by m or n from a list of numbers using lambda function.",
+    "test": [
+      "assert div_of_nums([19, 65, 57, 39, 152, 639, 121, 44, 90, 190],19,13)==[19, 65, 57, 39, 152, 190]",
+      "assert div_of_nums([1, 2, 3, 5, 7, 8, 10],2,5)==[2, 5, 8, 10]",
+      "assert div_of_nums([10,15,14,13,18,12,20],10,5)==[10, 15, 20]"
+    ]
+  },
+  {
+    "id": "mbpp_217",
+    "source": "mbpp",
+    "problem": "Write a python function to count lower case letters in a given string.",
+    "test": [
+      "assert lower_ctr('abc') == 3",
+      "assert lower_ctr('string') == 6",
+      "assert lower_ctr('Python') == 5"
+    ]
+  },
+  {
+    "id": "mbpp_218",
+    "source": "mbpp",
+    "problem": "Write a function to count the frequency of consecutive duplicate elements in a given list of numbers.",
+    "test": [
+      "assert count_duplic([1,2,2,2,4,4,4,5,5,5,5])==([1, 2, 4, 5], [1, 3, 3, 4])",
+      "assert count_duplic([2,2,3,1,2,6,7,9])==([2, 3, 1, 2, 6, 7, 9], [2, 1, 1, 1, 1, 1, 1])",
+      "assert count_duplic([2,1,5,6,8,3,4,9,10,11,8,12])==([2, 1, 5, 6, 8, 3, 4, 9, 10, 11, 8, 12], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])"
+    ]
+  },
+  {
+    "id": "mbpp_219",
+    "source": "mbpp",
+    "problem": "Write a function to check whether the given month number contains 28 days or not.",
+    "test": [
+      "assert check_monthnum_number(2)==True",
+      "assert check_monthnum_number(1)==False",
+      "assert check_monthnum_number(3)==False"
+    ]
+  },
+  {
+    "id": "mbpp_220",
+    "source": "mbpp",
+    "problem": "Write a function to merge two dictionaries into a single expression.",
+    "test": [
+      "assert merge_dictionaries({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" })=={'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White'}",
+      "assert merge_dictionaries({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })=={'O': 'Orange', 'P': 'Pink', 'B': 'Black', 'W': 'White', 'R': 'Red'}",
+      "assert merge_dictionaries({ \"G\": \"Green\", \"W\": \"White\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })=={'W': 'White', 'O': 'Orange', 'G': 'Green', 'B': 'Black'}"
+    ]
+  },
+  {
+    "id": "mbpp_221",
+    "source": "mbpp",
+    "problem": "Write a function to return true if the password is valid.",
+    "test": [
+      "assert pass_validity(\"password\")==False",
+      "assert pass_validity(\"Password@10\")==True",
+      "assert pass_validity(\"password@10\")==False"
+    ]
+  },
+  {
+    "id": "mbpp_222",
+    "source": "mbpp",
+    "problem": "Write a function to check if the given string starts with a substring using regex.",
+    "test": [
+      "assert check_substring(\"dreams for dreams makes life fun\", \"makes\") == 'string doesnt start with the given substring'",
+      "assert check_substring(\"Hi there how are you Hi alex\", \"Hi\") == 'string starts with the given substring'",
+      "assert check_substring(\"Its been a long day\", \"been\") == 'string doesnt start with the given substring'"
+    ]
+  },
+  {
+    "id": "mbpp_223",
+    "source": "mbpp",
+    "problem": "Write a python function to remove even numbers from a given list.",
+    "test": [
+      "assert remove_even([1,3,5,2]) == [1,3,5]",
+      "assert remove_even([5,6,7]) == [5,7]",
+      "assert remove_even([1,2,3,4]) == [1,3]"
+    ]
+  },
+  {
+    "id": "mbpp_224",
+    "source": "mbpp",
+    "problem": "Write a python function to access multiple elements of specified index from a given list.",
+    "test": [
+      "assert access_elements([2,3,8,4,7,9],[0,3,5]) == [2, 4, 9]",
+      "assert access_elements([1, 2, 3, 4, 5],[1,2]) == [2,3]",
+      "assert access_elements([1,0,2,3],[0,1]) == [1,0]"
+    ]
+  },
+  {
+    "id": "mbpp_225",
+    "source": "mbpp",
+    "problem": "Write a python function to find the type of triangle from the given sides.",
+    "test": [
+      "assert check_Type_Of_Triangle(1,2,3) == \"Obtuse-angled Triangle\"",
+      "assert check_Type_Of_Triangle(2,2,2) == \"Acute-angled Triangle\"",
+      "assert check_Type_Of_Triangle(1,0,1) == \"Right-angled Triangle\""
+    ]
+  },
+  {
+    "id": "mbpp_226",
+    "source": "mbpp",
+    "problem": "Write a function to sum a specific column of a list in a given list of lists.",
+    "test": [
+      "assert sum_column( [[1,2,3,2],[4,5,6,2],[7,8,9,5],],0)==12",
+      "assert sum_column( [[1,2,3,2],[4,5,6,2],[7,8,9,5],],1)==15",
+      "assert sum_column( [[1,2,3,2],[4,5,6,2],[7,8,9,5],],3)==9"
+    ]
+  },
+  {
+    "id": "mbpp_227",
+    "source": "mbpp",
+    "problem": "Write a function to count alphabets,digits and special charactes in a given string.",
+    "test": [
+      "assert count_alpha_dig_spl(\"abc!@#123\")==(3,3,3)",
+      "assert count_alpha_dig_spl(\"dgsuy@#$%&1255\")==(5,4,5)",
+      "assert count_alpha_dig_spl(\"fjdsif627348#%$^&\")==(6,6,5)"
+    ]
+  },
+  {
+    "id": "mbpp_228",
+    "source": "mbpp",
+    "problem": "Write a function to find out the second most repeated (or frequent) string in the given sequence.",
+    "test": [
+      "assert second_frequent(['aaa','bbb','ccc','bbb','aaa','aaa']) == 'bbb'",
+      "assert second_frequent(['abc','bcd','abc','bcd','bcd','bcd']) == 'abc'",
+      "assert second_frequent(['cdma','gsm','hspa','gsm','cdma','cdma']) == 'gsm'"
+    ]
+  },
+  {
+    "id": "mbpp_229",
+    "source": "mbpp",
+    "problem": "Write a function to round up a number to specific digits.",
+    "test": [
+      "assert round_up(123.01247,0)==124",
+      "assert round_up(123.01247,1)==123.1",
+      "assert round_up(123.01247,2)==123.02"
+    ]
+  },
+  {
+    "id": "mbpp_230",
+    "source": "mbpp",
+    "problem": "Write a python function to count equal element pairs from the given array.",
+    "test": [
+      "assert count_Pairs([1,1,1,1],4) == 6",
+      "assert count_Pairs([1,5,1],3) == 1",
+      "assert count_Pairs([3,2,1,7,8,9],6) == 0"
+    ]
+  },
+  {
+    "id": "mbpp_231",
+    "source": "mbpp",
+    "problem": "Write a function to extract the maximum numeric value from a string by using regex.",
+    "test": [
+      "assert extract_max('100klh564abc365bg') == 564",
+      "assert extract_max('hello300how546mer231') == 546",
+      "assert extract_max('its233beenalong343journey234') == 343"
+    ]
+  },
+  {
+    "id": "mbpp_232",
+    "source": "mbpp",
+    "problem": "Write a function to get dictionary keys as a list.",
+    "test": [
+      "assert get_key({1:'python',2:'java'})==[1,2]",
+      "assert get_key({10:'red',20:'blue',30:'black'})==[10,20,30]",
+      "assert get_key({27:'language',39:'java',44:'little'})==[27,39,44]"
+    ]
+  },
+  {
+    "id": "mbpp_233",
+    "source": "mbpp",
+    "problem": "Write a function to generate a square matrix filled with elements from 1 to n raised to the power of 2 in spiral order.",
+    "test": [
+      "assert generate_matrix(3)==[[1, 2, 3], [8, 9, 4], [7, 6, 5]] ",
+      "assert generate_matrix(2)==[[1,2],[4,3]]",
+      "assert generate_matrix(7)==[[1, 2, 3, 4, 5, 6, 7], [24, 25, 26, 27, 28, 29, 8], [23, 40, 41, 42, 43, 30, 9], [22, 39, 48, 49, 44, 31, 10], [21, 38, 47, 46, 45, 32, 11], [20, 37, 36, 35, 34, 33, 12], [19, 18, 17, 16, 15, 14, 13]]"
+    ]
+  },
+  {
+    "id": "mbpp_234",
+    "source": "mbpp",
+    "problem": "Write a python function to find the slope of a line.",
+    "test": [
+      "assert slope(4,2,2,5) == -1.5",
+      "assert slope(2,4,4,6) == 1",
+      "assert slope(1,2,4,2) == 0"
+    ]
+  },
+  {
+    "id": "mbpp_235",
+    "source": "mbpp",
+    "problem": "Write a function to find length of the subarray having maximum sum.",
+    "test": [
+      "assert max_sub_array_sum([-2, -3, 4, -1, -2, 1, 5, -3],8) == 5",
+      "assert max_sub_array_sum([1, -2, 1, 1, -2, 1],6) == 2",
+      "assert max_sub_array_sum([-1, -2, 3, 4, 5],5) == 3"
+    ]
+  },
+  {
+    "id": "mbpp_236",
+    "source": "mbpp",
+    "problem": "Write a python function to find the cube sum of first n odd natural numbers.",
+    "test": [
+      "assert cube_Sum(2) == 28",
+      "assert cube_Sum(3) == 153",
+      "assert cube_Sum(4) == 496"
+    ]
+  },
+  {
+    "id": "mbpp_237",
+    "source": "mbpp",
+    "problem": "Write a python function to find minimum number swaps required to make two binary strings equal.",
+    "test": [
+      "assert min_Swaps(\"0011\",\"1111\") == 1",
+      "assert min_Swaps(\"00011\",\"01001\") == 2",
+      "assert min_Swaps(\"111\",\"111\") == 0"
+    ]
+  },
+  {
+    "id": "mbpp_238",
+    "source": "mbpp",
+    "problem": "Write a function to sort the tuples alphabetically by the first item of each tuple.",
+    "test": [
+      "assert sort_tuple([(\"Amana\", 28), (\"Zenat\", 30), (\"Abhishek\", 29),(\"Nikhil\", 21), (\"B\", \"C\")]) == [('Abhishek', 29), ('Amana', 28), ('B', 'C'), ('Nikhil', 21), ('Zenat', 30)]",
+      "assert sort_tuple([(\"aaaa\", 28), (\"aa\", 30), (\"bab\", 29), (\"bb\", 21), (\"csa\", \"C\")]) == [('aa', 30), ('aaaa', 28), ('bab', 29), ('bb', 21), ('csa', 'C')]",
+      "assert sort_tuple([(\"Sarala\", 28), (\"Ayesha\", 30), (\"Suman\", 29),(\"Sai\", 21), (\"G\", \"H\")]) == [('Ayesha', 30), ('G', 'H'), ('Sai', 21), ('Sarala', 28), ('Suman', 29)]"
+    ]
+  },
+  {
+    "id": "mbpp_239",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the roots of a quadratic equation are numerically equal but opposite in sign or not.",
+    "test": [
+      "assert Check_Solution(2,0,-1) == \"Yes\"",
+      "assert Check_Solution(1,-5,6) == \"No\"",
+      "assert Check_Solution(2,0,2) == \"Yes\""
+    ]
+  },
+  {
+    "id": "mbpp_240",
+    "source": "mbpp",
+    "problem": "Write a function to count the number of inversions in the given array.",
+    "test": [
+      "assert get_inv_count([1, 20, 6, 4, 5], 5) == 5",
+      "assert get_inv_count([8, 4, 2, 1], 4) == 6",
+      "assert get_inv_count([3, 1, 2], 3) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_241",
+    "source": "mbpp",
+    "problem": "Write a function to find the number which occurs for odd number of times in the given array.",
+    "test": [
+      "assert get_odd_occurence([2, 3, 5, 4, 5, 2, 4, 3, 5, 2, 4, 4, 2], 13) == 5",
+      "assert get_odd_occurence([1, 2, 3, 2, 3, 1, 3], 7) == 3",
+      "assert get_odd_occurence([5, 7, 2, 7, 5, 2, 5], 7) == 5"
+    ]
+  },
+  {
+    "id": "mbpp_242",
+    "source": "mbpp",
+    "problem": "Write a function to find the nth super ugly number from a given prime list of size k using heap queue algorithm.",
+    "test": [
+      "assert nth_super_ugly_number(12,[2,7,13,19])==32",
+      "assert nth_super_ugly_number(10,[2,7,13,19])==26",
+      "assert nth_super_ugly_number(100,[2,7,13,19])==5408"
+    ]
+  },
+  {
+    "id": "mbpp_243",
+    "source": "mbpp",
+    "problem": "Write a python function to find the kth element in an array containing odd elements first and then even elements.",
+    "test": [
+      "assert get_Number(8,5) == 2",
+      "assert get_Number(7,2) == 3",
+      "assert get_Number(5,2) == 3"
+    ]
+  },
+  {
+    "id": "mbpp_244",
+    "source": "mbpp",
+    "problem": "Write a python function to count the number of digits in factorial of a given number.",
+    "test": [
+      "assert find_Digits(7) == 4",
+      "assert find_Digits(5) == 3",
+      "assert find_Digits(4) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_245",
+    "source": "mbpp",
+    "problem": "Write a function to find the minimum number of platforms required for a railway/bus station.",
+    "test": [
+      "assert find_platform([900, 940, 950, 1100, 1500, 1800],[910, 1200, 1120, 1130, 1900, 2000],6)==3",
+      "assert find_platform([100,200,300,400],[700,800,900,1000],4)==4",
+      "assert find_platform([5,6,7,8],[4,3,2,1],4)==1"
+    ]
+  },
+  {
+    "id": "mbpp_246",
+    "source": "mbpp",
+    "problem": "Write a python function to copy a list from a singleton tuple.",
+    "test": [
+      "assert lcopy([1, 2, 3]) == [1, 2, 3]",
+      "assert lcopy([4, 8, 2, 10, 15, 18]) == [4, 8, 2, 10, 15, 18]",
+      "assert lcopy([4, 5, 6]) == [4, 5, 6]\n"
+    ]
+  },
+  {
+    "id": "mbpp_247",
+    "source": "mbpp",
+    "problem": "Write a function to find the area of a trapezium.",
+    "test": [
+      "assert area_trapezium(6,9,4)==30",
+      "assert area_trapezium(10,20,30)==450",
+      "assert area_trapezium(15,25,35)==700"
+    ]
+  },
+  {
+    "id": "mbpp_248",
+    "source": "mbpp",
+    "problem": "Write a python function to find sum of all prime divisors of a given number.",
+    "test": [
+      "assert Sum(60) == 10",
+      "assert Sum(39) == 16",
+      "assert Sum(40) == 7"
+    ]
+  },
+  {
+    "id": "mbpp_249",
+    "source": "mbpp",
+    "problem": "Write a function to check if a triangle of positive area is possible with the given angles.",
+    "test": [
+      "assert is_triangleexists(50,60,70)==True",
+      "assert is_triangleexists(90,45,45)==True",
+      "assert is_triangleexists(150,30,70)==False"
+    ]
+  },
+  {
+    "id": "mbpp_250",
+    "source": "mbpp",
+    "problem": "Write a python function to find sum of inverse of divisors.",
+    "test": [
+      "assert Sum_of_Inverse_Divisors(6,12) == 2",
+      "assert Sum_of_Inverse_Divisors(9,13) == 1.44",
+      "assert Sum_of_Inverse_Divisors(1,4) == 4"
+    ]
+  },
+  {
+    "id": "mbpp_251",
+    "source": "mbpp",
+    "problem": "Write a python function to remove negative numbers from a list.",
+    "test": [
+      "assert remove_negs([1,-2,3,-4]) == [1,3]",
+      "assert remove_negs([1,2,3,-4]) == [1,2,3]",
+      "assert remove_negs([4,5,-6,7,-8]) == [4,5,7]"
+    ]
+  },
+  {
+    "id": "mbpp_252",
+    "source": "mbpp",
+    "problem": "Write a python function to find sum of odd factors of a number.",
+    "test": [
+      "assert sum_of_odd_Factors(30) == 24",
+      "assert sum_of_odd_Factors(18) == 13",
+      "assert sum_of_odd_Factors(2) == 1"
+    ]
+  },
+  {
+    "id": "mbpp_253",
+    "source": "mbpp",
+    "problem": "Write a function which accepts an arbitrary list and converts it to a heap using heap queue algorithm.",
+    "test": [
+      "assert raw_heap([25, 44, 68, 21, 39, 23, 89])==[21, 25, 23, 44, 39, 68, 89]",
+      "assert raw_heap([25, 35, 22, 85, 14, 65, 75, 25, 58])== [14, 25, 22, 25, 35, 65, 75, 85, 58]",
+      "assert raw_heap([4, 5, 6, 2])==[2, 4, 6, 5]"
+    ]
+  },
+  {
+    "id": "mbpp_254",
+    "source": "mbpp",
+    "problem": "Write a python function to check for even parity of a given number.",
+    "test": [
+      "assert check_Even_Parity(10) == True",
+      "assert check_Even_Parity(11) == False",
+      "assert check_Even_Parity(18) == True"
+    ]
+  },
+  {
+    "id": "mbpp_255",
+    "source": "mbpp",
+    "problem": "Write a python function to find minimum adjacent swaps required to sort binary array.",
+    "test": [
+      "assert find_Min_Swaps([1,0,1,0],4) == 3",
+      "assert find_Min_Swaps([0,1,0],3) == 1",
+      "assert find_Min_Swaps([0,0,1,1,0],5) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_256",
+    "source": "mbpp",
+    "problem": "Write a function to list out the list of given strings individually using map function.",
+    "test": [
+      "assert listify_list(['Red', 'Blue', 'Black', 'White', 'Pink'])==[['R', 'e', 'd'], ['B', 'l', 'u', 'e'], ['B', 'l', 'a', 'c', 'k'], ['W', 'h', 'i', 't', 'e'], ['P', 'i', 'n', 'k']]",
+      "assert listify_list(['python'])==[['p', 'y', 't', 'h', 'o', 'n']]",
+      "assert listify_list([' red ', 'green',' black', 'blue ',' orange', 'brown'])==[[' ', 'r', 'e', 'd', ' '], ['g', 'r', 'e', 'e', 'n'], [' ', 'b', 'l', 'a', 'c', 'k'], ['b', 'l', 'u', 'e', ' '], [' ', 'o', 'r', 'a', 'n', 'g', 'e'], ['b', 'r', 'o', 'w', 'n']]"
+    ]
+  },
+  {
+    "id": "mbpp_257",
+    "source": "mbpp",
+    "problem": "Write a function to count number of lists in a given list of lists and square the count.",
+    "test": [
+      "assert count_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])==25",
+      "assert count_list([[1, 3], [5, 7], [9, 11], [13, 15, 17]] )==16",
+      "assert count_list([[2, 4], [[6,8], [4,5,8]], [10, 12, 14]])==9"
+    ]
+  },
+  {
+    "id": "mbpp_258",
+    "source": "mbpp",
+    "problem": "Write a function to generate all sublists of a given list.",
+    "test": [
+      "assert sub_lists([10, 20, 30, 40])==[[], [10], [20], [30], [40], [10, 20], [10, 30], [10, 40], [20, 30], [20, 40], [30, 40], [10, 20, 30], [10, 20, 40], [10, 30, 40], [20, 30, 40], [10, 20, 30, 40]]",
+      "assert sub_lists(['X', 'Y', 'Z'])==[[], ['X'], ['Y'], ['Z'], ['X', 'Y'], ['X', 'Z'], ['Y', 'Z'], ['X', 'Y', 'Z']]",
+      "assert sub_lists([1,2,3])==[[],[1],[2],[3],[1,2],[1,3],[2,3],[1,2,3]]"
+    ]
+  },
+  {
+    "id": "mbpp_259",
+    "source": "mbpp",
+    "problem": "Write a function to check whether the given string is ending with only alphanumeric characters or not using regex.",
+    "test": [
+      "assert check_alphanumeric(\"dawood@\") == 'Discard'",
+      "assert check_alphanumeric(\"skdmsam326\") == 'Accept'",
+      "assert check_alphanumeric(\"cooltricks@\") == 'Discard'"
+    ]
+  },
+  {
+    "id": "mbpp_260",
+    "source": "mbpp",
+    "problem": "Write a function to find all anagrams of a string in a given list of strings using lambda function.",
+    "test": [
+      "assert anagram_lambda([\"bcda\", \"abce\", \"cbda\", \"cbea\", \"adcb\"],\"abcd\")==['bcda', 'cbda', 'adcb']",
+      "assert anagram_lambda([\"recitals\",\" python\"], \"articles\" )==[\"recitals\"]",
+      "assert anagram_lambda([\" keep\",\" abcdef\",\" xyz\"],\" peek\")==[\" keep\"]"
+    ]
+  },
+  {
+    "id": "mbpp_261",
+    "source": "mbpp",
+    "problem": "Write a function to find the occurrences of n most common words in a given text.",
+    "test": [
+      "assert n_common_words(\"python is a programming language\",1)==[('python', 1)]",
+      "assert n_common_words(\"python is a programming language\",1)==[('python', 1)]",
+      "assert n_common_words(\"python is a programming language\",5)==[('python', 1),('is', 1), ('a', 1), ('programming', 1), ('language', 1)]"
+    ]
+  },
+  {
+    "id": "mbpp_262",
+    "source": "mbpp",
+    "problem": "Write a function to find the length of the longest sub-sequence such that elements in the subsequences are consecutive integers.",
+    "test": [
+      "assert find_longest_conseq_subseq([1, 2, 2, 3], 4) == 3",
+      "assert find_longest_conseq_subseq([1, 9, 3, 10, 4, 20, 2], 7) == 4",
+      "assert find_longest_conseq_subseq([36, 41, 56, 35, 44, 33, 34, 92, 43, 32, 42], 11) == 5"
+    ]
+  },
+  {
+    "id": "mbpp_263",
+    "source": "mbpp",
+    "problem": "Write a function to find palindromes in a given list of strings using lambda function.",
+    "test": [
+      "assert palindrome_lambda([\"php\", \"res\", \"Python\", \"abcd\", \"Java\", \"aaa\"])==['php', 'aaa']",
+      "assert palindrome_lambda([\"abcd\", \"Python\", \"abba\", \"aba\"])==['abba', 'aba']",
+      "assert palindrome_lambda([\"abcd\", \"abbccbba\", \"abba\", \"aba\"])==['abbccbba', 'abba', 'aba']"
+    ]
+  },
+  {
+    "id": "mbpp_264",
+    "source": "mbpp",
+    "problem": "Write a function to print n-times a list using map function.",
+    "test": [
+      "assert ntimes_list([1, 2, 3, 4, 5, 6, 7],3)==[3, 6, 9, 12, 15, 18, 21]",
+      "assert ntimes_list([1, 2, 3, 4, 5, 6, 7],4)==[4, 8, 12, 16, 20, 24, 28]",
+      "assert ntimes_list([1, 2, 3, 4, 5, 6, 7],10)==[10, 20, 30, 40, 50, 60, 70]"
+    ]
+  },
+  {
+    "id": "mbpp_265",
+    "source": "mbpp",
+    "problem": "Write a function to check whether the given month name contains 31 days or not.",
+    "test": [
+      "assert check_monthnumb(\"February\")==False",
+      "assert check_monthnumb(\"January\")==True",
+      "assert check_monthnumb(\"March\")==True"
+    ]
+  },
+  {
+    "id": "mbpp_266",
+    "source": "mbpp",
+    "problem": "Write a python function to add a minimum number such that the sum of array becomes even.",
+    "test": [
+      "assert min_Num([1,2,3,4,5,6,7,8,9],9) == 1",
+      "assert min_Num([1,2,3,4,5,6,7,8],8) == 2",
+      "assert min_Num([1,2,3],3) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_267",
+    "source": "mbpp",
+    "problem": "Write a python function to find the length of the last word in a given string.",
+    "test": [
+      "assert length_Of_Last_Word(\"python language\") == 8",
+      "assert length_Of_Last_Word(\"PHP\") == 3",
+      "assert length_Of_Last_Word(\"\") == 0"
+    ]
+  },
+  {
+    "id": "mbpp_268",
+    "source": "mbpp",
+    "problem": "Write a function to remove sublists from a given list of lists, which are outside a given range.",
+    "test": [
+      "assert remove_list_range([[2], [0], [1, 2, 3], [0, 1, 2, 3, 6, 7], [9, 11], [13, 14, 15, 17]],13,17)==[[13, 14, 15, 17]]",
+      "assert remove_list_range([[2], [0], [1, 2, 3], [0, 1, 2, 3, 6, 7], [9, 11], [13, 14, 15, 17]],1,3)==[[2], [1, 2, 3]]",
+      "assert remove_list_range([[2], [0], [1, 2, 3], [0, 1, 2, 3, 6, 7], [9, 11], [13, 14, 15, 17]],0,7)==[[2], [0], [1, 2, 3], [0, 1, 2, 3, 6, 7]]"
+    ]
+  },
+  {
+    "id": "mbpp_269",
+    "source": "mbpp",
+    "problem": "Write a function to calculate the sum of the positive numbers of a given list of numbers using lambda function.",
+    "test": [
+      "assert sum_positivenum([2, 4, -6, -9, 11, -12, 14, -5, 17])==48",
+      "assert sum_positivenum([10,15,-14,13,-18,12,-20])==50",
+      "assert sum_positivenum([19, -65, 57, 39, 152,-639, 121, 44, 90, -190])==522"
+    ]
+  },
+  {
+    "id": "mbpp_270",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the given strings are rotations of each other or not.",
+    "test": [
+      "assert are_Rotations(\"abc\",\"cba\") == False",
+      "assert are_Rotations(\"abcd\",\"cdba\") == False",
+      "assert are_Rotations(\"abacd\",\"cdaba\") == True"
+    ]
+  },
+  {
+    "id": "mbpp_271",
+    "source": "mbpp",
+    "problem": "Write a function to check if a nested list is a subset of another nested list.",
+    "test": [
+      "assert check_subset([[1, 3], [5, 7], [9, 11], [13, 15, 17]] ,[[1, 3],[13,15,17]])==True",
+      "assert check_subset([[1, 2], [2, 3], [3, 4], [5, 6]],[[3, 4], [5, 6]])==True",
+      "assert check_subset([[[1, 2], [2, 3]], [[3, 4], [5, 7]]],[[[3, 4], [5, 6]]])==False"
+    ]
+  },
+  {
+    "id": "mbpp_272",
+    "source": "mbpp",
+    "problem": "Write a function to solve the fibonacci sequence using recursion.",
+    "test": [
+      "assert fibonacci(7) == 13",
+      "assert fibonacci(8) == 21",
+      "assert fibonacci(9) == 34"
+    ]
+  },
+  {
+    "id": "mbpp_273",
+    "source": "mbpp",
+    "problem": "Write a python function to check if the string is a concatenation of another string.",
+    "test": [
+      "assert check_Concat(\"abcabcabc\",\"abc\") == True",
+      "assert check_Concat(\"abcab\",\"abc\") == False",
+      "assert check_Concat(\"aba\",\"ab\") == False"
+    ]
+  },
+  {
+    "id": "mbpp_274",
+    "source": "mbpp",
+    "problem": "Write a function to find the minimum difference in the tuple pairs of given tuples.",
+    "test": [
+      "assert min_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 1",
+      "assert min_difference([(4, 6), (12, 8), (11, 4), (2, 13)]) == 2",
+      "assert min_difference([(5, 17), (3, 9), (12, 5), (3, 24)]) == 6"
+    ]
+  },
+  {
+    "id": "mbpp_275",
+    "source": "mbpp",
+    "problem": "Write a python function to find lcm of two positive integers.",
+    "test": [
+      "assert lcm(4,6) == 12",
+      "assert lcm(15,17) == 255",
+      "assert lcm(2,6) == 6"
+    ]
+  },
+  {
+    "id": "mbpp_276",
+    "source": "mbpp",
+    "problem": "Write a python function to sort the given string.",
+    "test": [
+      "assert sort_String(\"cba\") == \"abc\"",
+      "assert sort_String(\"data\") == \"aadt\"",
+      "assert sort_String(\"zxy\") == \"xyz\""
+    ]
+  },
+  {
+    "id": "mbpp_277",
+    "source": "mbpp",
+    "problem": "Write a function to check if the given tuple contains only k elements.",
+    "test": [
+      "assert check_tuples((3, 5, 6, 5, 3, 6),[3, 6, 5]) == True",
+      "assert check_tuples((4, 5, 6, 4, 6, 5),[4, 5, 6]) == True",
+      "assert check_tuples((9, 8, 7, 6, 8, 9),[9, 8, 1]) == False"
+    ]
+  },
+  {
+    "id": "mbpp_278",
+    "source": "mbpp",
+    "problem": "Write a function that matches a string that has an 'a' followed by anything, ending in 'b' by using regex.",
+    "test": [
+      "assert text_match(\"aabbbbd\") == 'Not matched!'",
+      "assert text_match(\"aabAbbbc\") == 'Not matched!'",
+      "assert text_match(\"accddbbjjjb\") == 'Found a match!'"
+    ]
+  },
+  {
+    "id": "mbpp_279",
+    "source": "mbpp",
+    "problem": "Write a python function to find number of solutions in quadratic equation.",
+    "test": [
+      "assert Check_Solution(2,5,2) == \"2 solutions\"",
+      "assert Check_Solution(1,1,1) == \"No solutions\"",
+      "assert Check_Solution(1,2,1) == \"1 solution\""
+    ]
+  },
+  {
+    "id": "mbpp_280",
+    "source": "mbpp",
+    "problem": "Write a function to find the sum of first even and odd number of a given list.",
+    "test": [
+      "assert sum_even_odd([1,3,5,7,4,1,6,8])==5",
+      "assert sum_even_odd([1,2,3,4,5,6,7,8,9,10])==3",
+      "assert sum_even_odd([1,5,7,9,10])==11"
+    ]
+  },
+  {
+    "id": "mbpp_281",
+    "source": "mbpp",
+    "problem": "Write a function to caluclate perimeter of a parallelogram.",
+    "test": [
+      "assert parallelogram_perimeter(10,20)==400",
+      "assert parallelogram_perimeter(15,20)==600",
+      "assert parallelogram_perimeter(8,9)==144"
+    ]
+  },
+  {
+    "id": "mbpp_282",
+    "source": "mbpp",
+    "problem": "Write a function to find numbers divisible by m and n from a list of numbers using lambda function.",
+    "test": [
+      "assert div_of_nums([19, 65, 57, 39, 152, 639, 121, 44, 90, 190],2,4)==[ 152,44]",
+      "assert div_of_nums([1, 2, 3, 5, 7, 8, 10],2,5)==[10]",
+      "assert div_of_nums([10,15,14,13,18,12,20],10,5)==[10,20]"
+    ]
+  },
+  {
+    "id": "mbpp_283",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether all the bits are within a given range or not.",
+    "test": [
+      "assert all_Bits_Set_In_The_Given_Range(10,2,1) == True ",
+      "assert all_Bits_Set_In_The_Given_Range(5,2,4) == False",
+      "assert all_Bits_Set_In_The_Given_Range(22,2,3) == True "
+    ]
+  },
+  {
+    "id": "mbpp_284",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the two given strings are isomorphic to each other or not.",
+    "test": [
+      "assert is_Isomorphic(\"paper\",\"title\") == True",
+      "assert is_Isomorphic(\"ab\",\"ba\") == True",
+      "assert is_Isomorphic(\"ab\",\"aa\") == False"
+    ]
+  },
+  {
+    "id": "mbpp_285",
+    "source": "mbpp",
+    "problem": "Write a function to add all the numbers in a list and divide it with the length of the list.",
+    "test": [
+      "assert sum_num((8, 2, 3, 0, 7))==4.0",
+      "assert sum_num((-10,-20,-30))==-20.0",
+      "assert sum_num((19,15,18))==17.333333333333332"
+    ]
+  },
+  {
+    "id": "mbpp_286",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the given number is odd or not using bitwise operator.",
+    "test": [
+      "assert is_odd(5) == True",
+      "assert is_odd(6) == False",
+      "assert is_odd(7) == True"
+    ]
+  },
+  {
+    "id": "mbpp_287",
+    "source": "mbpp",
+    "problem": "Write a function to substract the elements of the given nested tuples.",
+    "test": [
+      "assert substract_elements(((1, 3), (4, 5), (2, 9), (1, 10)), ((6, 7), (3, 9), (1, 1), (7, 3))) == ((-5, -4), (1, -4), (1, 8), (-6, 7))",
+      "assert substract_elements(((13, 4), (14, 6), (13, 10), (12, 11)), ((19, 8), (14, 10), (12, 2), (18, 4))) == ((-6, -4), (0, -4), (1, 8), (-6, 7))",
+      "assert substract_elements(((19, 5), (18, 7), (19, 11), (17, 12)), ((12, 9), (17, 11), (13, 3), (19, 5))) == ((7, -4), (1, -4), (6, 8), (-2, 7))"
+    ]
+  },
+  {
+    "id": "mbpp_288",
+    "source": "mbpp",
+    "problem": "Write a function to reverse each list in a given list of lists.",
+    "test": [
+      "assert reverse_list_lists([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])==[[4, 3, 2, 1], [8, 7, 6, 5], [12, 11, 10, 9], [16, 15, 14, 13]]",
+      "assert reverse_list_lists([[1,2],[2,3],[3,4]])==[[2,1],[3,2],[4,3]]",
+      "assert reverse_list_lists([[10,20],[30,40]])==[[20,10],[40,30]]"
+    ]
+  },
+  {
+    "id": "mbpp_289",
+    "source": "mbpp",
+    "problem": "Write a python function to find the index of an extra element present in one sorted array.",
+    "test": [
+      "assert find_Extra([1,2,3,4],[1,2,3],3) == 3",
+      "assert find_Extra([2,4,6,8,10],[2,4,6,8],4) == 4",
+      "assert find_Extra([1,3,5,7,9,11],[1,3,5,7,9],5) == 5"
+    ]
+  },
+  {
+    "id": "mbpp_290",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the given two numbers have same number of digits or not.",
+    "test": [
+      "assert same_Length(12,1) == False",
+      "assert same_Length(2,2) == True",
+      "assert same_Length(10,20) == True"
+    ]
+  },
+  {
+    "id": "mbpp_291",
+    "source": "mbpp",
+    "problem": "Write a function to remove multiple spaces in a string.",
+    "test": [
+      "assert remove_spaces('python  program')==('python program')",
+      "assert remove_spaces('python   programming    language')==('python programming language')",
+      "assert remove_spaces('python                     program')==('python program')"
+    ]
+  },
+  {
+    "id": "mbpp_292",
+    "source": "mbpp",
+    "problem": "Write a python function to get the last element of each sublist.",
+    "test": [
+      "assert Extract([[1, 2, 3], [4, 5], [6, 7, 8, 9]]) == [3, 5, 9]",
+      "assert Extract([['x', 'y', 'z'], ['m'], ['a', 'b'], ['u', 'v']]) == ['z', 'm', 'b', 'v']",
+      "assert Extract([[1, 2, 3], [4, 5]]) == [3, 5]"
+    ]
+  },
+  {
+    "id": "mbpp_293",
+    "source": "mbpp",
+    "problem": "Write a function to convert the given string of float type into tuple.",
+    "test": [
+      "assert float_to_tuple(\"1.2, 1.3, 2.3, 2.4, 6.5\") == (1.2, 1.3, 2.3, 2.4, 6.5)",
+      "assert float_to_tuple(\"2.3, 2.4, 5.6, 5.4, 8.9\") == (2.3, 2.4, 5.6, 5.4, 8.9)",
+      "assert float_to_tuple(\"0.3, 0.5, 7.8, 9.4\") == (0.3, 0.5, 7.8, 9.4)"
+    ]
+  },
+  {
+    "id": "mbpp_294",
+    "source": "mbpp",
+    "problem": "Write a function to find the maximum sum of subsequences of given array with no adjacent elements.",
+    "test": [
+      "assert max_sum_subseq([1, 2, 9, 4, 5, 0, 4, 11, 6]) == 26",
+      "assert max_sum_subseq([1, 2, 9, 5, 6, 0, 5, 12, 7]) == 28",
+      "assert max_sum_subseq([1, 3, 10, 5, 6, 0, 6, 14, 21]) == 44"
+    ]
+  },
+  {
+    "id": "mbpp_295",
+    "source": "mbpp",
+    "problem": "Write a function to sort a list in increasing order by the last element in each tuple from a given list of non-empty tuples.",
+    "test": [
+      "assert sort_list_last([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)])==[(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)] ",
+      "assert sort_list_last([(9,8), (4, 7), (3,5), (7,9), (1,2)])==[(1,2), (3,5), (4,7), (9,8), (7,9)] ",
+      "assert sort_list_last([(20,50), (10,20), (40,40)])==[(10,20),(40,40),(20,50)] "
+    ]
+  },
+  {
+    "id": "mbpp_296",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the word is present in a given sentence or not.",
+    "test": [
+      "assert is_Word_Present(\"machine learning\",\"machine\") == True",
+      "assert is_Word_Present(\"easy\",\"fun\") == False",
+      "assert is_Word_Present(\"python language\",\"code\") == False"
+    ]
+  },
+  {
+    "id": "mbpp_297",
+    "source": "mbpp",
+    "problem": "Write a function to extract specified number of elements from a given list, which follow each other continuously.",
+    "test": [
+      "assert extract_elements([1, 1, 3, 4, 4, 5, 6, 7],2)==[1, 4]",
+      "assert extract_elements([0, 1, 2, 3, 4, 4, 4, 4, 5, 7],4)==[4]",
+      "assert extract_elements([0,0,0,0,0],5)==[0]"
+    ]
+  },
+  {
+    "id": "mbpp_298",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether an array can be sorted or not by picking only the corner elements.",
+    "test": [
+      "assert check([3,2,1,2,3,4],6) == True",
+      "assert check([2,1,4,5,1],5) == True",
+      "assert check([1,2,2,1,2,3],6) == True"
+    ]
+  },
+  {
+    "id": "mbpp_299",
+    "source": "mbpp",
+    "problem": "Write a function where a string will start with a specific number.",
+    "test": [
+      "assert match_num('5-2345861')==True",
+      "assert match_num('6-2345861')==False",
+      "assert match_num('78910')==False"
+    ]
+  },
+  {
+    "id": "mbpp_300",
+    "source": "mbpp",
+    "problem": "Write a function to find the smallest multiple of the first n numbers.",
+    "test": [
+      "assert smallest_multiple(13)==360360",
+      "assert smallest_multiple(2)==2",
+      "assert smallest_multiple(1)==1"
+    ]
+  },
+  {
+    "id": "mbpp_301",
+    "source": "mbpp",
+    "problem": "Write a function to combine two dictionaries by adding values for common keys.",
+    "test": [
+      "assert add_dict({'a': 100, 'b': 200, 'c':300},{'a': 300, 'b': 200, 'd':400})==({'b': 400, 'd': 400, 'a': 400, 'c': 300}) ",
+      "assert add_dict({'a': 500, 'b': 700, 'c':900},{'a': 500, 'b': 600, 'd':900})==({'b': 1300, 'd': 900, 'a': 1000, 'c': 900}) ",
+      "assert add_dict({'a':900,'b':900,'d':900},{'a':900,'b':900,'d':900})==({'b': 1800, 'd': 1800, 'a': 1800})"
+    ]
+  },
+  {
+    "id": "mbpp_302",
+    "source": "mbpp",
+    "problem": "Write a python function to count the total unset bits from 1 to n.",
+    "test": [
+      "assert count_Unset_Bits(2) == 1",
+      "assert count_Unset_Bits(5) == 4",
+      "assert count_Unset_Bits(14) == 17"
+    ]
+  },
+  {
+    "id": "mbpp_303",
+    "source": "mbpp",
+    "problem": "Write a function to return true if the given number is even else return false.",
+    "test": [
+      "assert even_num(13.5)==False",
+      "assert even_num(0)==True",
+      "assert even_num(-9)==False"
+    ]
+  },
+  {
+    "id": "mbpp_304",
+    "source": "mbpp",
+    "problem": "Write a python function to find the sum of squares of binomial co-efficients.",
+    "test": [
+      "assert sum_of_square(4) == 70",
+      "assert sum_of_square(5) == 252",
+      "assert sum_of_square(2) == 6"
+    ]
+  },
+  {
+    "id": "mbpp_305",
+    "source": "mbpp",
+    "problem": "Write a function to extract year, month and date from a url by using regex.",
+    "test": [
+      "assert extract_date(\"https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/odell-beckhams-fame-rests-on-one-stupid-little-ball-josh-norman-tells-author/\") == [('2016', '09', '02')]",
+      "assert extract_date(\"https://www.indiatoday.in/movies/celebrities/story/wp/2020/11/03/odeof-sushant-singh-rajput-s-death-his-brother-in-law-shares-advice-for-fans-1749646/\") == [('2020', '11', '03')]",
+      "assert extract_date(\"https://economictimes.indiatimes.com/news/economy/2020/12/29/finance/pension-assets-under-pfrda-touch-rs-5-32-lakh-crore/articleshow/79736619.cms\") == [('2020', '12', '29')]"
+    ]
+  },
+  {
+    "id": "mbpp_306",
+    "source": "mbpp",
+    "problem": "Write a function to print the first n lucky numbers.",
+    "test": [
+      "assert lucky_num(10)==[1, 3, 7, 9, 13, 15, 21, 25, 31, 33] ",
+      "assert lucky_num(5)==[1, 3, 7, 9, 13]",
+      "assert lucky_num(8)==[1, 3, 7, 9, 13, 15, 21, 25]"
+    ]
+  },
+  {
+    "id": "mbpp_307",
+    "source": "mbpp",
+    "problem": "Write a function to find the fixed point in the given array.",
+    "test": [
+      "assert find_fixed_point([-10, -1, 0, 3, 10, 11, 30, 50, 100],9) == 3",
+      "assert find_fixed_point([1, 2, 3, 4, 5, 6, 7, 8],8) == -1",
+      "assert find_fixed_point([0, 2, 5, 8, 17],5) == 0"
+    ]
+  },
+  {
+    "id": "mbpp_308",
+    "source": "mbpp",
+    "problem": "Write a function to find the previous palindrome of a specified number.",
+    "test": [
+      "assert previous_palindrome(99)==88",
+      "assert previous_palindrome(1221)==1111",
+      "assert previous_palindrome(120)==111"
+    ]
+  },
+  {
+    "id": "mbpp_309",
+    "source": "mbpp",
+    "problem": "Write a function to validate a gregorian date.",
+    "test": [
+      "assert check_date(11,11,2002)==True",
+      "assert check_date(13,11,2002)==False",
+      "assert check_date('11','11','2002')==True"
+    ]
+  },
+  {
+    "id": "mbpp_310",
+    "source": "mbpp",
+    "problem": "Write a function to compute maximum product of three numbers of a given array of integers using heap queue algorithm.",
+    "test": [
+      "assert maximum_product( [12, 74, 9, 50, 61, 41])==225700",
+      "assert maximum_product([25, 35, 22, 85, 14, 65, 75, 25, 58])==414375",
+      "assert maximum_product([18, 14, 10, 9, 8, 7, 9, 3, 2, 4, 1])==2520"
+    ]
+  },
+  {
+    "id": "mbpp_311",
+    "source": "mbpp",
+    "problem": "Write a function to find ln, m lobb number.",
+    "test": [
+      "assert int(lobb_num(5, 3)) == 35",
+      "assert int(lobb_num(3, 2)) == 5",
+      "assert int(lobb_num(4, 2)) == 20"
+    ]
+  },
+  {
+    "id": "mbpp_312",
+    "source": "mbpp",
+    "problem": "Write a function to check for a number at the end of a string.",
+    "test": [
+      "assert end_num('abcdef')==False",
+      "assert end_num('abcdef7')==True",
+      "assert end_num('abc')==False"
+    ]
+  },
+  {
+    "id": "mbpp_313",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the given string is made up of two alternating characters or not.",
+    "test": [
+      "assert is_Two_Alter(\"abab\") == True",
+      "assert is_Two_Alter(\"aaaa\") == False",
+      "assert is_Two_Alter(\"xyz\") == False"
+    ]
+  },
+  {
+    "id": "mbpp_314",
+    "source": "mbpp",
+    "problem": "Write a function to rearrange positive and negative numbers in a given array using lambda function.",
+    "test": [
+      "assert rearrange_numbs([-1, 2, -3, 5, 7, 8, 9, -10])==[2, 5, 7, 8, 9, -10, -3, -1]",
+      "assert rearrange_numbs([10,15,14,13,-18,12,-20])==[10, 12, 13, 14, 15, -20, -18]",
+      "assert rearrange_numbs([-20,20,-10,10,-30,30])==[10, 20, 30, -30, -20, -10]"
+    ]
+  },
+  {
+    "id": "mbpp_315",
+    "source": "mbpp",
+    "problem": "Write a function to find if there is a triplet in the array whose sum is equal to a given value.",
+    "test": [
+      "assert find_triplet_array([1, 4, 45, 6, 10, 8], 6, 22) == (4, 10, 8)",
+      "assert find_triplet_array([12, 3, 5, 2, 6, 9], 6, 24) == (12, 3, 9)",
+      "assert find_triplet_array([1, 2, 3, 4, 5], 5, 9) == (1, 3, 5)"
+    ]
+  },
+  {
+    "id": "mbpp_316",
+    "source": "mbpp",
+    "problem": "Write a function to find the sequences of one upper case letter followed by lower case letters.",
+    "test": [
+      "assert text_uppercase_lowercase(\"AaBbGg\")==('Found a match!')",
+      "assert text_uppercase_lowercase(\"aA\")==('Not matched!')",
+      "assert text_uppercase_lowercase(\"PYTHON\")==('Not matched!')"
+    ]
+  },
+  {
+    "id": "mbpp_317",
+    "source": "mbpp",
+    "problem": "Write a function to count coin change.",
+    "test": [
+      "assert coin_change([1, 2, 3],3,4)==4",
+      "assert coin_change([4,5,6,7,8,9],6,9)==2",
+      "assert coin_change([4,5,6,7,8,9],6,4)==1"
+    ]
+  },
+  {
+    "id": "mbpp_318",
+    "source": "mbpp",
+    "problem": "Write a python function to multiply all items in the list.",
+    "test": [
+      "assert multiply_list([1,-2,3]) == -6",
+      "assert multiply_list([1,2,3,4]) == 24",
+      "assert multiply_list([3,1,2,3]) == 18"
+    ]
+  },
+  {
+    "id": "mbpp_319",
+    "source": "mbpp",
+    "problem": "Write a function to remove all tuples with all none values in the given tuple list.",
+    "test": [
+      "assert remove_tuple([(None, 2), (None, None), (3, 4), (12, 3), (None, )] ) == '[(None, 2), (3, 4), (12, 3)]'",
+      "assert remove_tuple([(None, None), (None, None), (3, 6), (17, 3), (None,1 )] ) == '[(3, 6), (17, 3), (None, 1)]'",
+      "assert remove_tuple([(1, 2), (2, None), (3, None), (24, 3), (None, None )] ) == '[(1, 2), (2, None), (3, None), (24, 3)]'"
+    ]
+  },
+  {
+    "id": "mbpp_320",
+    "source": "mbpp",
+    "problem": "Write a function to perform chunking of tuples each of size n.",
+    "test": [
+      "assert chunk_tuples((10, 4, 5, 6, 7, 6, 8, 3, 4), 3) == [(10, 4, 5), (6, 7, 6), (8, 3, 4)]",
+      "assert chunk_tuples((1, 2, 3, 4, 5, 6, 7, 8, 9), 2) == [(1, 2), (3, 4), (5, 6), (7, 8), (9,)]",
+      "assert chunk_tuples((11, 14, 16, 17, 19, 21, 22, 25), 4) == [(11, 14, 16, 17), (19, 21, 22, 25)]"
+    ]
+  },
+  {
+    "id": "mbpp_321",
+    "source": "mbpp",
+    "problem": "Write a function to find a pair with the highest product from a given array of integers.",
+    "test": [
+      "assert max_product([1, 2, 3, 4, 7, 0, 8, 4])==(7, 8)",
+      "assert max_product([0, -1, -2, -4, 5, 0, -6])==(-4, -6)",
+      "assert max_product([1, 3, 5, 6, 8, 9])==(8,9)"
+    ]
+  },
+  {
+    "id": "mbpp_322",
+    "source": "mbpp",
+    "problem": "Write a function to find the length of the shortest string that has both str1 and str2 as subsequences.",
+    "test": [
+      "assert super_seq(\"AGGTAB\", \"GXTXAYB\", 6, 7) == 9",
+      "assert super_seq(\"feek\", \"eke\", 4, 3) == 5",
+      "assert super_seq(\"PARRT\", \"RTA\", 5, 3) == 6"
+    ]
+  },
+  {
+    "id": "mbpp_323",
+    "source": "mbpp",
+    "problem": "Write a function to find maximum of two numbers.",
+    "test": [
+      "assert max_of_two(10,20)==20",
+      "assert max_of_two(19,15)==19",
+      "assert max_of_two(-10,-20)==-10"
+    ]
+  },
+  {
+    "id": "mbpp_324",
+    "source": "mbpp",
+    "problem": "Write a python function to calculate the product of all the numbers of a given tuple.",
+    "test": [
+      "assert mutiple_tuple((4, 3, 2, 2, -1, 18)) == -864",
+      "assert mutiple_tuple((1,2,3)) == 6",
+      "assert mutiple_tuple((-2,-4,-6)) == -48"
+    ]
+  },
+  {
+    "id": "mbpp_325",
+    "source": "mbpp",
+    "problem": "Write a function to find n-th rencontres number.",
+    "test": [
+      "assert rencontres_number(7, 2) == 924",
+      "assert rencontres_number(3, 0) == 2",
+      "assert rencontres_number(3, 1) == 3"
+    ]
+  },
+  {
+    "id": "mbpp_326",
+    "source": "mbpp",
+    "problem": "Write a function to calculate the height of the given binary tree.",
+    "test": [
+      "assert (max_height(root)) == 3",
+      "assert (max_height(root1)) == 5 ",
+      "assert (max_height(root2)) == 4"
+    ]
+  },
+  {
+    "id": "mbpp_327",
+    "source": "mbpp",
+    "problem": "Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.",
+    "test": [
+      "assert change_date_format('2026-01-02')=='02-01-2026'",
+      "assert change_date_format('2021-01-04')=='04-01-2021'",
+      "assert change_date_format('2030-06-06')=='06-06-2030'"
+    ]
+  },
+  {
+    "id": "mbpp_328",
+    "source": "mbpp",
+    "problem": "Write a function to count repeated items of a tuple.",
+    "test": [
+      "assert count_tuplex((2, 4, 5, 6, 2, 3, 4, 4, 7),4)==3",
+      "assert count_tuplex((2, 4, 5, 6, 2, 3, 4, 4, 7),2)==2",
+      "assert count_tuplex((2, 4, 7, 7, 7, 3, 4, 4, 7),7)==4"
+    ]
+  },
+  {
+    "id": "mbpp_329",
+    "source": "mbpp",
+    "problem": "Write a function that matches a string that has an a followed by zero or more b's by using regex.",
+    "test": [
+      "assert text_match(\"msb\") == 'Not matched!'",
+      "assert text_match(\"a0c\") == 'Found a match!'",
+      "assert text_match(\"abbc\") == 'Found a match!'"
+    ]
+  },
+  {
+    "id": "mbpp_330",
+    "source": "mbpp",
+    "problem": "Write a function to calculate the sum of series 1\u00b3+2\u00b3+3\u00b3+\u2026.+n\u00b3.",
+    "test": [
+      "assert sum_series(7)==784",
+      "assert sum_series(5)==225",
+      "assert sum_series(15)==14400"
+    ]
+  },
+  {
+    "id": "mbpp_331",
+    "source": "mbpp",
+    "problem": "Write a function to remove duplicate words from a given list of strings.",
+    "test": [
+      "assert remove_duplic_list([\"Python\", \"Exercises\", \"Practice\", \"Solution\", \"Exercises\"])==['Python', 'Exercises', 'Practice', 'Solution']",
+      "assert remove_duplic_list([\"Python\", \"Exercises\", \"Practice\", \"Solution\", \"Exercises\",\"Java\"])==['Python', 'Exercises', 'Practice', 'Solution', 'Java']",
+      "assert remove_duplic_list([\"Python\", \"Exercises\", \"Practice\", \"Solution\", \"Exercises\",\"C++\",\"C\",\"C++\"])==['Python', 'Exercises', 'Practice', 'Solution','C++','C']"
+    ]
+  },
+  {
+    "id": "mbpp_332",
+    "source": "mbpp",
+    "problem": "Write a function to convert camel case string to snake case string by using regex.",
+    "test": [
+      "assert camel_to_snake('GoogleAssistant') == 'google_assistant'",
+      "assert camel_to_snake('ChromeCast') == 'chrome_cast'",
+      "assert camel_to_snake('QuadCore') == 'quad_core'"
+    ]
+  },
+  {
+    "id": "mbpp_333",
+    "source": "mbpp",
+    "problem": "Write a function to find the nth delannoy number.",
+    "test": [
+      "assert dealnnoy_num(3, 4) == 129",
+      "assert dealnnoy_num(3, 3) == 63",
+      "assert dealnnoy_num(4, 5) == 681"
+    ]
+  },
+  {
+    "id": "mbpp_334",
+    "source": "mbpp",
+    "problem": "Write a function to calculate the sum of series 1\u00b2+2\u00b2+3\u00b2+\u2026.+n\u00b2.",
+    "test": [
+      "assert series_sum(6)==91",
+      "assert series_sum(7)==140",
+      "assert series_sum(12)==650"
+    ]
+  },
+  {
+    "id": "mbpp_335",
+    "source": "mbpp",
+    "problem": "Write a function to re-arrange the given tuples based on the given ordered list.",
+    "test": [
+      "assert re_arrange_tuples([(4, 3), (1, 9), (2, 10), (3, 2)],  [1, 4, 2, 3]) == [(1, 9), (4, 3), (2, 10), (3, 2)]",
+      "assert re_arrange_tuples([(5, 4), (2, 10), (3, 11), (4, 3)],  [3, 4, 2, 3]) == [(3, 11), (4, 3), (2, 10), (3, 11)]",
+      "assert re_arrange_tuples([(6, 3), (3, 8), (5, 7), (2, 4)],  [2, 5, 3, 6]) == [(2, 4), (5, 7), (3, 8), (6, 3)]"
+    ]
+  },
+  {
+    "id": "mbpp_336",
+    "source": "mbpp",
+    "problem": "Write a function to count the most common character in a given string.",
+    "test": [
+      "assert max_char(\"hello world\")==('l')",
+      "assert max_char(\"hello \")==('l')",
+      "assert max_char(\"python pr\")==('p')"
+    ]
+  },
+  {
+    "id": "mbpp_337",
+    "source": "mbpp",
+    "problem": "Write a function to find three closest elements from three sorted arrays.",
+    "test": [
+      "assert find_closet([1, 4, 10],[2, 15, 20],[10, 12],3,3,2) == (10, 15, 10)",
+      "assert find_closet([20, 24, 100],[2, 19, 22, 79, 800],[10, 12, 23, 24, 119],3,5,5) == (24, 22, 23)",
+      "assert find_closet([2, 5, 11],[3, 16, 21],[11, 13],3,3,2) == (11, 16, 11)"
+    ]
+  },
+  {
+    "id": "mbpp_338",
+    "source": "mbpp",
+    "problem": "Write a function to sort a list of dictionaries using lambda function.",
+    "test": [
+      "assert sorted_models([{'make':'Nokia', 'model':216, 'color':'Black'}, {'make':'Mi Max', 'model':2, 'color':'Gold'}, {'make':'Samsung', 'model': 7, 'color':'Blue'}])==[{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}, {'make': 'Mi Max', 'model': 2, 'color': 'Gold'}]",
+      "assert sorted_models([{'make':'Vivo', 'model':20,'color':'Blue'},{'make': 'oppo','model':17,'color':'Gold'},{'make':'Apple','model':11,'color':'red'}])==([{'make':'Vivo', 'model':20,'color':'Blue'},{'make': 'oppo','model':17,'color':'Gold'},{'make':'Apple','model':11,'color':'red'}])",
+      "assert sorted_models([{'make':'micromax','model':40,'color':'grey'},{'make':'poco','model':60,'color':'blue'}])==([{'make':'poco','model':60,'color':'blue'},{'make':'micromax','model':40,'color':'grey'}])"
+    ]
+  },
+  {
+    "id": "mbpp_339",
+    "source": "mbpp",
+    "problem": "Write a function to sort the given array by using heap sort.",
+    "test": [
+      "assert heap_sort([12, 2, 4, 5, 2, 3]) == [2, 2, 3, 4, 5, 12]",
+      "assert heap_sort([32, 14, 5, 6, 7, 19]) == [5, 6, 7, 14, 19, 32]",
+      "assert heap_sort([21, 15, 29, 78, 65]) == [15, 21, 29, 65, 78]"
+    ]
+  },
+  {
+    "id": "mbpp_340",
+    "source": "mbpp",
+    "problem": "Write a function to count the elements in a list until an element is a tuple.",
+    "test": [
+      "assert count_elim([10,20,30,(10,20),40])==3",
+      "assert count_elim([10,(20,30),(10,20),40])==1",
+      "assert count_elim([(10,(20,30,(10,20),40))])==0"
+    ]
+  },
+  {
+    "id": "mbpp_341",
+    "source": "mbpp",
+    "problem": "Write a function to check if any list element is present in the given list.",
+    "test": [
+      "assert check_element((4, 5, 7, 9, 3),  [6, 7, 10, 11]) == True",
+      "assert check_element((1, 2, 3, 4),  [4, 6, 7, 8, 9]) == True",
+      "assert check_element((3, 2, 1, 4, 5),  [9, 8, 7, 6]) == False"
+    ]
+  },
+  {
+    "id": "mbpp_342",
+    "source": "mbpp",
+    "problem": "Write a function to combine two given sorted lists using heapq module.",
+    "test": [
+      "assert combine_lists([1, 3, 5, 7, 9, 11],[0, 2, 4, 6, 8, 10])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+      "assert combine_lists([1, 3, 5, 6, 8, 9], [2, 5, 7, 11])==[1,2,3,5,5,6,7,8,9,11]",
+      "assert combine_lists([1,3,7],[2,4,6])==[1,2,3,4,6,7]"
+    ]
+  },
+  {
+    "id": "mbpp_343",
+    "source": "mbpp",
+    "problem": "Write a function to separate and print the numbers and their position of a given string.",
+    "test": [
+      "assert num_position(\"there are 70 flats in this apartment\")==10",
+      "assert num_position(\"every adult have 32 teeth\")==17",
+      "assert num_position(\"isha has 79 chocolates in her bag\")==9"
+    ]
+  },
+  {
+    "id": "mbpp_344",
+    "source": "mbpp",
+    "problem": "Write a function to convert the given tuples into set.",
+    "test": [
+      "assert tuple_to_set(('x', 'y', 'z') ) == {'y', 'x', 'z'}",
+      "assert tuple_to_set(('a', 'b', 'c') ) == {'c', 'a', 'b'}",
+      "assert tuple_to_set(('z', 'd', 'e') ) == {'d', 'e', 'z'}"
+    ]
+  },
+  {
+    "id": "mbpp_345",
+    "source": "mbpp",
+    "problem": "Write a function to find the most common elements and their counts of a specified text.",
+    "test": [
+      "assert most_common_elem('lkseropewdssafsdfafkpwe',3)==[('s', 4), ('e', 3), ('f', 3)] ",
+      "assert most_common_elem('lkseropewdssafsdfafkpwe',2)==[('s', 4), ('e', 3)]",
+      "assert most_common_elem('lkseropewdssafsdfafkpwe',7)==[('s', 4), ('e', 3), ('f', 3), ('k', 2), ('p', 2), ('w', 2), ('d', 2)]"
+    ]
+  },
+  {
+    "id": "mbpp_346",
+    "source": "mbpp",
+    "problem": "Write a python function to find the length of the shortest word.",
+    "test": [
+      "assert len_log([\"win\",\"lose\",\"great\"]) == 3",
+      "assert len_log([\"a\",\"ab\",\"abc\"]) == 1",
+      "assert len_log([\"12\",\"12\",\"1234\"]) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_347",
+    "source": "mbpp",
+    "problem": "Write a function to get an item of a tuple.",
+    "test": [
+      "assert get_item((\"w\", 3, \"r\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\"),3)==('e')",
+      "assert get_item((\"w\", 3, \"r\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\"),-4)==('u')",
+      "assert get_item((\"w\", 3, \"r\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\"),-3)==('r')"
+    ]
+  },
+  {
+    "id": "mbpp_348",
+    "source": "mbpp",
+    "problem": "Write a function to sort the given tuple list basis the total digits in tuple.",
+    "test": [
+      "assert sort_list([(3, 4, 6, 723), (1, 2), (12345,), (134, 234, 34)] ) == '[(1, 2), (12345,), (3, 4, 6, 723), (134, 234, 34)]'",
+      "assert sort_list([(3, 4, 8), (1, 2), (1234335,), (1345, 234, 334)] ) == '[(1, 2), (3, 4, 8), (1234335,), (1345, 234, 334)]'",
+      "assert sort_list([(34, 4, 61, 723), (1, 2), (145,), (134, 23)] ) == '[(1, 2), (145,), (134, 23), (34, 4, 61, 723)]'"
+    ]
+  },
+  {
+    "id": "mbpp_349",
+    "source": "mbpp",
+    "problem": "Write a function to display sign of the chinese zodiac for given year.",
+    "test": [
+      "assert chinese_zodiac(1997)==('Ox')",
+      "assert chinese_zodiac(1998)==('Tiger')",
+      "assert chinese_zodiac(1994)==('Dog')"
+    ]
+  },
+  {
+    "id": "mbpp_350",
+    "source": "mbpp",
+    "problem": "Write a function to find the maximum of similar indices in two lists of tuples.",
+    "test": [
+      "assert max_similar_indices([(2, 4), (6, 7), (5, 1)],[(5, 4), (8, 10), (8, 14)]) == [(5, 4), (8, 10), (8, 14)]",
+      "assert max_similar_indices([(3, 5), (7, 8), (6, 2)],[(6, 5), (9, 11), (9, 15)]) == [(6, 5), (9, 11), (9, 15)]",
+      "assert max_similar_indices([(4, 6), (8, 9), (7, 3)],[(7, 6), (10, 12), (10, 16)]) == [(7, 6), (10, 12), (10, 16)]"
+    ]
+  },
+  {
+    "id": "mbpp_351",
+    "source": "mbpp",
+    "problem": "Write a function to compute the value of ncr mod p.",
+    "test": [
+      "assert nCr_mod_p(10, 2, 13) == 6",
+      "assert nCr_mod_p(11, 3, 14) == 11",
+      "assert nCr_mod_p(18, 14, 19) == 1"
+    ]
+  },
+  {
+    "id": "mbpp_352",
+    "source": "mbpp",
+    "problem": "Write a python function to find the minimun number of subsets with distinct elements.",
+    "test": [
+      "assert subset([1, 2, 3, 4],4) == 1",
+      "assert subset([5, 6, 9, 3, 4, 3, 4],7) == 2",
+      "assert subset([1, 2, 3 ],3) == 1"
+    ]
+  },
+  {
+    "id": "mbpp_353",
+    "source": "mbpp",
+    "problem": "Write a function that gives profit amount if the given amount has profit else return none.",
+    "test": [
+      "assert profit_amount(1500,1200)==300",
+      "assert profit_amount(100,200)==None",
+      "assert profit_amount(2000,5000)==None"
+    ]
+  },
+  {
+    "id": "mbpp_354",
+    "source": "mbpp",
+    "problem": "Write a function to find out, if the given number is abundant.",
+    "test": [
+      "assert is_abundant(12)==True",
+      "assert is_abundant(13)==False",
+      "assert is_abundant(9)==False"
+    ]
+  },
+  {
+    "id": "mbpp_355",
+    "source": "mbpp",
+    "problem": "Write a function to split the given string at uppercase letters by using regex.",
+    "test": [
+      "assert split_list(\"LearnToBuildAnythingWithGoogle\") == ['Learn', 'To', 'Build', 'Anything', 'With', 'Google']",
+      "assert split_list(\"ApmlifyingTheBlack+DeveloperCommunity\") == ['Apmlifying', 'The', 'Black+', 'Developer', 'Community']",
+      "assert split_list(\"UpdateInTheGoEcoSystem\") == ['Update', 'In', 'The', 'Go', 'Eco', 'System']"
+    ]
+  },
+  {
+    "id": "mbpp_356",
+    "source": "mbpp",
+    "problem": "Write a python function to get the position of rightmost set bit.",
+    "test": [
+      "assert get_First_Set_Bit_Pos(12) == 3",
+      "assert get_First_Set_Bit_Pos(18) == 2",
+      "assert get_First_Set_Bit_Pos(16) == 5"
+    ]
+  },
+  {
+    "id": "mbpp_357",
+    "source": "mbpp",
+    "problem": "Write a function to convert an integer into a roman numeral.",
+    "test": [
+      "assert int_to_roman(1)==(\"I\")",
+      "assert int_to_roman(50)==(\"L\")",
+      "assert int_to_roman(4)==(\"IV\")"
+    ]
+  },
+  {
+    "id": "mbpp_358",
+    "source": "mbpp",
+    "problem": "Write a python function to find the average of a list.",
+    "test": [
+      "assert Average([15, 9, 55, 41, 35, 20, 62, 49]) == 35.75",
+      "assert Average([4, 5, 1, 2, 9, 7, 10, 8]) == 5.75",
+      "assert Average([1,2,3]) == 2"
+    ]
+  },
+  {
+    "id": "mbpp_359",
+    "source": "mbpp",
+    "problem": "Write a function to solve tiling problem.",
+    "test": [
+      "assert get_noOfways(4)==3",
+      "assert get_noOfways(3)==2",
+      "assert get_noOfways(5)==5"
+    ]
+  },
+  {
+    "id": "mbpp_360",
+    "source": "mbpp",
+    "problem": "Write a function to convert a roman numeral to an integer.",
+    "test": [
+      "assert roman_to_int('MMMCMLXXXVI')==3986",
+      "assert roman_to_int('MMMM')==4000",
+      "assert roman_to_int('C')==100"
+    ]
+  },
+  {
+    "id": "mbpp_361",
+    "source": "mbpp",
+    "problem": "Write a python function to find the sum of all even natural numbers within the range l and r.",
+    "test": [
+      "assert sum_Even(2,5) == 6",
+      "assert sum_Even(3,8) == 18",
+      "assert sum_Even(4,6) == 10"
+    ]
+  },
+  {
+    "id": "mbpp_362",
+    "source": "mbpp",
+    "problem": "Write a function to calculate the discriminant value.",
+    "test": [
+      "assert discriminant_value(4,8,2)==(\"Two solutions\",32)",
+      "assert discriminant_value(5,7,9)==(\"no real solution\",-131)",
+      "assert discriminant_value(0,0,9)==(\"one solution\",0)"
+    ]
+  },
+  {
+    "id": "mbpp_363",
+    "source": "mbpp",
+    "problem": "Write a python function to check whether the length of the word is even or not.",
+    "test": [
+      "assert word_len(\"program\") == False",
+      "assert word_len(\"solution\") == True",
+      "assert word_len(\"data\") == True"
+    ]
+  },
+  {
+    "id": "mbpp_364",
+    "source": "mbpp",
+    "problem": "Write a function to convert camel case string to snake case string.",
+    "test": [
+      "assert camel_to_snake('PythonProgram')==('python_program')",
+      "assert camel_to_snake('pythonLanguage')==('python_language')",
+      "assert camel_to_snake('ProgrammingLanguage')==('programming_language')"
+    ]
+  },
+  {
+    "id": "mbpp_365",
+    "source": "mbpp",
+    "problem": "Write a function to remove an empty tuple from a list of tuples.",
+    "test": [
+      "assert remove_empty([(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')])==[('',), ('a', 'b'), ('a', 'b', 'c'), 'd']  ",
+      "assert remove_empty([(), (), ('',), (\"python\"), (\"program\")])==[('',), (\"python\"), (\"program\")]  ",
+      "assert remove_empty([(), (), ('',), (\"java\")])==[('',),(\"java\") ]  "
+    ]
+  },
+  {
+    "id": "mbpp_366",
+    "source": "mbpp",
+    "problem": "Write a python function to accept the strings which contains all vowels.",
+    "test": [
+      "assert check(\"SEEquoiaL\") == 'accepted'",
+      "assert check('program') == \"not accepted\"",
+      "assert check('fine') == \"not accepted\""
+    ]
+  },
+  {
+    "id": "mbpp_367",
+    "source": "mbpp",
+    "problem": "Write a python function to find maximum possible value for the given periodic function.",
+    "test": [
+      "assert floor_Max(11,10,9) == 9",
+      "assert floor_Max(5,7,4) == 2",
+      "assert floor_Max(2,2,1) == 1"
+    ]
+  },
+  {
+    "id": "mbpp_368",
+    "source": "mbpp",
+    "problem": "Write a function to join the tuples if they have similar initial elements.",
+    "test": [
+      "assert join_tuples([(5, 6), (5, 7), (6, 8), (6, 10), (7, 13)] ) == [(5, 6, 7), (6, 8, 10), (7, 13)]",
+      "assert join_tuples([(6, 7), (6, 8), (7, 9), (7, 11), (8, 14)] ) == [(6, 7, 8), (7, 9, 11), (8, 14)]",
+      "assert join_tuples([(7, 8), (7, 9), (8, 10), (8, 12), (9, 15)] ) == [(7, 8, 9), (8, 10, 12), (9, 15)]"
+    ]
+  },
+  {
+    "id": "mbpp_369",
+    "source": "mbpp",
+    "problem": "Write a function to find minimum of two numbers.",
+    "test": [
+      "assert min_of_two(10,20)==10",
+      "assert min_of_two(19,15)==15",
+      "assert min_of_two(-10,-20)==-20"
+    ]
+  },
+  {
+    "id": "mbpp_370",
+    "source": "mbpp",
+    "problem": "Write a function to find the maximum number of segments of lengths a, b and c that can be formed from n.",
+    "test": [
+      "assert maximum_segments(7, 5, 2, 5) == 2",
+      "assert maximum_segments(17, 2, 1, 3) == 17",
+      "assert maximum_segments(18, 16, 3, 6) == 6"
+    ]
+  },
+  {
+    "id": "mbpp_371",
+    "source": "mbpp",
+    "problem": "Write a function to concatenate the given two tuples to a nested tuple.",
+    "test": [
+      "assert concatenate_nested((3, 4), (5, 6)) == (3, 4, 5, 6)",
+      "assert concatenate_nested((1, 2), (3, 4)) == (1, 2, 3, 4)",
+      "assert concatenate_nested((4, 5), (6, 8)) == (4, 5, 6, 8)"
+    ]
+  },
+  {
+    "id": "mbpp_372",
+    "source": "mbpp",
+    "problem": "Write a python function to left rotate the string.",
+    "test": [
+      "assert left_rotate(\"python\",2) == \"thonpy\"   ",
+      "assert left_rotate(\"bigdata\",3 ) == \"databig\" ",
+      "assert left_rotate(\"hadoop\",1 ) == \"adooph\" "
+    ]
+  },
+  {
+    "id": "mbpp_373",
+    "source": "mbpp",
+    "problem": "Write a function to find the minimum total path sum in the given triangle.",
+    "test": [
+      "assert min_sum_path([[ 2 ], [3, 9 ], [1, 6, 7 ]]) == 6",
+      "assert min_sum_path([[ 2 ], [3, 7 ], [8, 5, 6 ]]) == 10 ",
+      "assert min_sum_path([[ 3 ], [6, 4 ], [5, 2, 7 ]]) == 9"
+    ]
+  }
+]
