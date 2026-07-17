@@ -17,7 +17,7 @@ def download_tasks():
                        "problem": item["prompt"], "test": item["test"]})
     for i, item in enumerate(mbpp):
         tasks.append({"id": f"mbpp_{i}", "source": "mbpp",
-                       "problem": item["text"], "test": item["test_list"]})
+                   "problem": item["text"], "test": "\n".join(item["test_list"])})
 
     with open("datasets/raw/all_tasks.json", "w") as f:
         json.dump(tasks, f, indent=2)
