@@ -1,10 +1,10 @@
 from typing import TypedDict
 from langgraph.graph import StateGraph, END
 
-from planner import plan
-from coder import code as generate_code
-from tester import run_tests
-from debugger import debug
+from agents.planner import plan
+from agents.coder import code as generate_code
+from agents.tester import run_tests
+from agents.debugger import debug
 
 MAX_RETRIES = 3
 
