@@ -48,9 +48,14 @@ Problem:
 Plan:
 {plan}
 
-The following test code will call your function — your function name and signature
-MUST exactly match what this test code expects:
+The following test code will call your function:
 {test_code}
+
+CRITICAL: Look at the test code above and find the EXACT function name being called
+(e.g. if the test writes `max_of_three(...)`, your function must be named exactly
+`max_of_three` — character for character, not `find_max_of_three`, not `findMax`,
+not any variation). Copy the function name directly from the test code's assert
+statements, do not paraphrase or "improve" it.
 """
 
 def strip_code_fences(text: str) -> str:

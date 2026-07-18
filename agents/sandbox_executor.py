@@ -26,12 +26,14 @@ def run_in_sandbox(code: str, test_code: str) -> dict:
         with open(os.path.join(tmpdir, "solution.py"), "w") as f:
             f.write(code)
         with open(os.path.join(tmpdir, "test_solution.py"), "w") as f:
-            f.write(test_code)
+            # f.write(test_code)
+            f.write("from solution import *\n\n" + test_code)
 
         try:
             container = client.containers.run(
                 SANDBOX_IMAGE,
-                command="pytest test_solution.py -q",
+                # command="pytest test_solution.py -q",
+                command="python test_solution.py",
                 volumes={tmpdir: {"bind": "/sandbox", "mode": "rw"}},
                 working_dir="/sandbox",
                 network_disabled=True,      # no internet access for untrusted code

@@ -33,8 +33,7 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "qwen2.5:7b-instruct-q4_K_M"
 
 DEBUGGER_PROMPT = """You are a debugging agent. The following code failed its tests.
-Fix the code so all tests pass. Function name and signature must match the test code
-exactly. Return only the corrected Python code, no explanation.
+Fix the code so all tests pass. Return only the corrected Python code, no explanation.
 
 Problem:
 {problem}
@@ -47,6 +46,10 @@ Test code:
 
 Test error:
 {error}
+
+CRITICAL: If the error is a NameError about a missing function, the function name in
+your code does NOT match the test code exactly. Copy the exact function name used in
+the test code's assert statements — character for character.
 """
 
 def debug(problem: str, code: str, test_code: str, error: str) -> str:
