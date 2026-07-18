@@ -38,3 +38,23 @@ def compress(problem: str, plan: str, code: str) -> str:
     })
     response.raise_for_status()
     return response.json()["response"]
+
+def compress_dataset(input_file: str, output_file: str):
+    with open(input_file) as f:
+        trajectories = json.load(f)
+
+    compressed = {}
+    passing_only = {k: v for k, v in trajectories.items() if v["passed"]}
+
+    for key, traj in passing_only.items():
+        print(f"Compressing {key}...")
+        compressed[key] = {
+            "problem": traj["problem"],
+            "compressed_cot": compress(traj["problem"], traj["plan"], traj["code"]),
+            "final_code": traj["code"]
+        }
+        with open(output_file, "w") as f:
+            json.dump(compressed, f, indent=2)
+
+if __name__ == "__main__":
+    compress_dataset("datasets/raw/trajectories_yeshita_7b.json", "datasets/raw/compressed_yeshita_7b.json")
