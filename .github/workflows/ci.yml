@@ -1,11 +1,9 @@
 name: CI
-
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,7 +14,10 @@ jobs:
           python-version: "3.12"
       - name: Install CPU-only deps for CI (no GPU on runners)
         run: |
-          pip install pytest
-      - name: Run tests
+          pip install pytest requests docker python-dotenv groq google-generativeai
+      - name: Build sandbox Docker image
         run: |
-          pytest tests/ -v || echo "no tests yet"
+          docker build -t adc-sandbox:latest -f docker_configs/sandbox.Dockerfile .
+      - name: Run agent unit tests
+        run: |
+          pytest tests/ -v
