@@ -32,12 +32,17 @@ def run_in_sandbox(code: str, test_code: str) -> dict:
         try:
             container = client.containers.run(
                 SANDBOX_IMAGE,
-                # command="pytest test_solution.py -q",
                 command="python test_solution.py",
                 volumes={tmpdir: {"bind": "/sandbox", "mode": "rw"}},
                 working_dir="/sandbox",
                 network_disabled=True,      # no internet access for untrusted code
-                mem_limit="256m",           # basic resource cap (Sakshi hardens further later)
+                mem_limit="256m",           # hard memory cap
+                memswap_limit="256m",       # disable swap, prevent OOM workaround
+                cpu_quota=50000,            # 50% of one CPU core (100000 = 1 core)
+                cpu_period=100000,
+                pids_limit=64,              # cap process/thread count (fork-bomb protection)
+                security_opt=["no-new-privileges"],
+                read_only=True,             # root filesystem read-only, only /sandbox is writable
                 detach=True,
             )
             result = container.wait(timeout=TIMEOUT_SECONDS)
@@ -52,12 +57,21 @@ def run_in_sandbox(code: str, test_code: str) -> dict:
                 "exit_code": exit_code,
             }
         except Exception as e:
+            try:
+                container.kill()
+            except Exception:
+                pass
             return {
                 "passed": False,
                 "stdout": "",
-                "stderr": str(e),
+                "stderr": f"Sandbox execution failed or timed out: {e}",
                 "exit_code": -1,
             }
+        finally:
+            try:
+                container.remove(force=True)
+            except Exception:
+                pass
 
 
 if __name__ == "__main__":
