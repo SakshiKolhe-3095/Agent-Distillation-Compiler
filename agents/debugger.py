@@ -1,4 +1,5 @@
 import requests
+from agents.coder import strip_code_fences
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "qwen2.5:7b-instruct-q4_K_M"
@@ -23,4 +24,4 @@ def debug(problem: str, code: str, error: str) -> str:
         "stream": False
     })
     response.raise_for_status()
-    return response.json()["response"]
+    return strip_code_fences(response.json()["response"])
