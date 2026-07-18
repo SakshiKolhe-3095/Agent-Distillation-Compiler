@@ -1,0 +1,78 @@
+{
+  "qwen2.5:7b-instruct-q4_K_M": {
+    "model": "qwen2.5:7b-instruct-q4_K_M",
+    "pass_rate": "4/5",
+    "total_time_sec": 63.38,
+    "avg_time_sec": 12.68,
+    "details": [
+      {
+        "problem": "write a function that reverses a string",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 9.63
+      },
+      {
+        "problem": "write a function that checks if a number is prime",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 10.05
+      },
+      {
+        "problem": "write a function that returns the factorial of a number",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 9.48
+      },
+      {
+        "problem": "write a function that finds the max value in a list",
+        "passed": false,
+        "retries": 3,
+        "time_sec": 25.24
+      },
+      {
+        "problem": "write a function that checks if a string is a palindrome",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 8.97
+      }
+    ]
+  },
+  "qwen2.5:14b-instruct-q4_K_M": {
+    "model": "qwen2.5:14b-instruct-q4_K_M",
+    "pass_rate": "4/5",
+    "total_time_sec": 57.23,
+    "avg_time_sec": 11.45,
+    "details": [
+      {
+        "problem": "write a function that reverses a string",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 10.55
+      },
+      {
+        "problem": "write a function that checks if a number is prime",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 9.46
+      },
+      {
+        "problem": "write a function that returns the factorial of a number",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 9.75
+      },
+      {
+        "problem": "write a function that finds the max value in a list",
+        "passed": false,
+        "retries": 3,
+        "time_sec": 18.99
+      },
+      {
+        "problem": "write a function that checks if a string is a palindrome",
+        "passed": true,
+        "retries": 0,
+        "time_sec": 8.48
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+﻿services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: docker/sandbox.Dockerfile
+    image: adc-sandbox:latest

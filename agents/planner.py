@@ -1,7 +1,12 @@
 import requests
 
+# OLLAMA_URL = "http://localhost:11434/api/generate"
+# MODEL = "qwen2.5:7b-instruct-q4_K_M"
+
+import os
+
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL = "qwen2.5:7b-instruct-q4_K_M"
+MODEL = os.environ.get("TEACHER_MODEL", "qwen2.5:7b-instruct-q4_K_M")
 
 PLANNER_PROMPT = """You are a planning agent. Break the following coding problem
 into a short numbered list of concrete implementation steps. Do not write code yet.
