@@ -1,45 +1,47 @@
 """
-Converts compressed_dataset_v1.json into SFT-format {prompt, completion} pairs,
-splits into train/val/test (80/10/10).
-PLACEHOLDER: running on the 174-example compressed set (Yeshita + Faiza sources only).
-Repoint INPUT_FILE once Sakshi's merged/deduped dataset lands, then re-run.
+Converts Faiza's canonical datasets/splits/{train,val,test}.json (raw trajectory
+schema: problem/plan/code) into SFT-format JSONL, compressing each entry via
+agents.compressor along the way.
 """
 import json
-import random
+import os
+from agents.compressor import compress, clean_final_code
 
-INPUT_FILE = "datasets/raw/compressed_dataset_v1.json"
+SPLITS_DIR = "datasets/splits"
 OUTPUT_DIR = "datasets/sft"
 
-random.seed(42)
 
-def main():
-    with open(INPUT_FILE) as f:
+def load_progress(path: str) -> dict:
+    if os.path.exists(path):
+        with open(path) as f:
+            return {json.loads(line)["id"]: json.loads(line) for line in f}
+    return {}
+
+
+def convert_split(name: str):
+    with open(f"{SPLITS_DIR}/{name}.json") as f:
         data = json.load(f)
 
-    examples = []
-    for key, entry in data.items():
-        prompt = f"Problem:\n{entry['problem']}\n\nSolve this in Python."
-        completion = f"{entry['compressed_cot']}"
-        examples.append({"id": key, "prompt": prompt, "completion": completion})
-
-    random.shuffle(examples)
-    n = len(examples)
-    train_end = int(n * 0.8)
-    val_end = train_end + int(n * 0.1)
-
-    splits = {
-        "train": examples[:train_end],
-        "val": examples[train_end:val_end],
-        "test": examples[val_end:]
-    }
-
-    import os
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    for name, subset in splits.items():
-        with open(f"{OUTPUT_DIR}/{name}.jsonl", "w") as f:
-            for ex in subset:
-                f.write(json.dumps(ex) + "\n")
-        print(f"{name}: {len(subset)} examples")
+    out_path = f"{OUTPUT_DIR}/{name}.jsonl"
+    done = load_progress(out_path)
+
+    with open(out_path, "a") as f:
+        for key, entry in data.items():
+            if key in done:
+                continue
+            if not entry.get("passed"):
+                continue
+            print(f"[{name}] compressing {key}...")
+            cot = compress(entry["problem"], entry.get("plan", ""), entry["code"])
+            code = clean_final_code(entry["code"])
+            prompt = f"Problem:\n{entry['problem']}\n\nSolve this in Python."
+            completion = cot
+            f.write(json.dumps({"id": key, "prompt": prompt, "completion": completion, "final_code": code}) + "\n")
+
+    print(f"{name}: done")
+
 
 if __name__ == "__main__":
-    main()
+    for split in ["train", "val", "test"]:
+        convert_split(split)
