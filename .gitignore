@@ -24,6 +24,7 @@ models/
 logs/
 results.json
 wandb/
+evaluation/results/
 
 # W&B
 *.log
