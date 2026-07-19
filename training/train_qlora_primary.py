@@ -3,9 +3,17 @@ Primary QLoRA fine-tuning run — Qwen2.5-Coder-7B, 4-bit, rank 32.
 Trains on datasets/sft/train.jsonl, evals against val.jsonl.
 """
 import json
+import sys
+
+_cwd = sys.path[0]
+if _cwd in sys.path:
+    sys.path.remove(_cwd)  # hide local datasets/ folder from shadowing pip's datasets
+
 from unsloth import FastLanguageModel
 from trl import SFTTrainer, SFTConfig
 from datasets import Dataset
+
+sys.path.insert(0, _cwd)  # restore for local imports (agents.*, etc.)
 
 # add near the top of train_qlora_primary.py, right after imports, before model loading
 import unsloth_zoo.fused_losses.cross_entropy_loss as _ce_mod
@@ -60,7 +68,7 @@ def main():
         output_dir=OUTPUT_DIR,
         per_device_train_batch_size=2,
         gradient_accumulation_steps=8,
-        num_train_epochs=1,
+        num_train_epochs=2,
         learning_rate=2e-4,
         logging_steps=1,
         save_strategy="epoch",
@@ -79,7 +87,17 @@ def main():
         args=training_args,
     )
 
-    trainer.train()
+    import os
+    checkpoint_dirs = [d for d in os.listdir(OUTPUT_DIR) if d.startswith("checkpoint-")] if os.path.exists(OUTPUT_DIR) else []
+    resume_from = os.path.join(OUTPUT_DIR, sorted(checkpoint_dirs)[-1]) if checkpoint_dirs else None
+
+    if resume_from:
+        print(f"Resuming from checkpoint: {resume_from}")
+        trainer.train(resume_from_checkpoint=resume_from)
+    else:
+        trainer.train()
+
+    
     trainer.save_model(OUTPUT_DIR)
     print(f"\nTraining complete. Checkpoint saved to {OUTPUT_DIR}")
 
