@@ -26,8 +26,13 @@ def call_teacher(prompt: str, max_ollama_retries: int = 3) -> str:
     """
     Tries local Ollama model first (with retries).
     Falls back to Groq/Gemini API teacher if Ollama fails entirely.
+    Set SKIP_OLLAMA=1 in the environment to bypass Ollama entirely and go
+    straight to the API teacher (useful for API-only trajectory runs).
     Returns the raw text response.
     """
+    if os.environ.get("SKIP_OLLAMA"):
+        return _get_api_teacher().generate(prompt)
+
     last_err = None
     for attempt in range(max_ollama_retries):
         try:

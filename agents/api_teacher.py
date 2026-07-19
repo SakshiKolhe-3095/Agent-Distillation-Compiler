@@ -13,7 +13,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 
 class APITeacher:
-    def __init__(self, groq_model: str = "llama-3.3-70b-versatile", gemini_model: str = "gemini-1.5-flash"):
+    def __init__(self, groq_model: str = "llama-3.3-70b-versatile", gemini_model: str = "gemini-2.0-flash"):
         self.groq_model = groq_model
         self.gemini_model = gemini_model
 

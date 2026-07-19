@@ -114,9 +114,9 @@ def run_in_sandbox(code: str, test_code: str, timeout_seconds: int = TIMEOUT_SEC
     client = docker.from_env()
     container = None
     with tempfile.TemporaryDirectory() as tmpdir:
-        with open(os.path.join(tmpdir, "solution.py"), "w") as f:
+        with open(os.path.join(tmpdir, "solution.py"), "w", encoding="utf-8") as f:
             f.write(code)
-        with open(os.path.join(tmpdir, "test_solution.py"), "w") as f:
+        with open(os.path.join(tmpdir, "test_solution.py"), "w", encoding="utf-8") as f:
             f.write("from solution import *\n\n" + test_code)
         try:
             container = client.containers.run(
