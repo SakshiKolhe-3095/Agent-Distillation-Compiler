@@ -1,7 +1,8 @@
 """
-Re-runs tasks that previously required retries, this time capturing the full
-code_history so we can build DPO preference pairs (rejected = early failing
-attempt, preferred = final passing attempt).
+Re-runs tasks that previously required retries, capturing the full
+code_history to build DPO preference pairs. Now builds a pair between EACH
+consecutive attempt (not just first-vs-final), giving more training signal
+per task.
 """
 import json
 import os
@@ -54,22 +55,31 @@ def main():
         final_state = pipeline.invoke(state)
 
         history = final_state.get("code_history", [])
-        if len(history) == 0:
-            # never actually retried this time around (model got it right first try)
+        full_chain = history + [final_state["code"]]
+
+        if len(full_chain) < 2:
             print(f"  no retries this run, skipping pair")
             continue
 
+        # build a pair for EACH consecutive attempt, not just first-vs-final
+        pairs = []
+        for i in range(len(full_chain) - 1):
+            pairs.append({
+                "rejected": full_chain[i],
+                "preferred": full_chain[i + 1],
+            })
+
         results[tid] = {
             "problem": task["problem"],
-            "rejected": history[0],          # first attempt (was failing)
-            "preferred": final_state["code"],  # final attempt
+            "pairs": pairs,
             "passed": final_state["passed"],
             "retries": final_state.get("retries", 0),
         }
         save_progress(results)
-        print(f"  passed={final_state['passed']}, pair saved")
+        print(f"  passed={final_state['passed']}, {len(pairs)} pair(s) saved")
 
-    print(f"\n=== {len(results)} DPO pairs collected ===")
+    total_pairs = sum(len(v["pairs"]) for v in results.values())
+    print(f"\n=== {len(results)} tasks, {total_pairs} total DPO pairs ===")
 
 
 if __name__ == "__main__":
