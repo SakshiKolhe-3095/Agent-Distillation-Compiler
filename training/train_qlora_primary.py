@@ -68,7 +68,7 @@ def main():
         output_dir=OUTPUT_DIR,
         per_device_train_batch_size=2,
         gradient_accumulation_steps=8,
-        num_train_epochs=2,
+        num_train_epochs=3,
         learning_rate=2e-4,
         logging_steps=1,
         save_strategy="epoch",
