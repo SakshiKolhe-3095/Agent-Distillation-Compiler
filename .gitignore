@@ -40,3 +40,4 @@ training/checkpoints/
 
 models/*
 !models/qlora-primary-final-metadata.json
+!models/router.pkl
