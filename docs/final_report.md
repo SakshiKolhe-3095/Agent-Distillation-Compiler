@@ -31,7 +31,19 @@ Three independent QLoRA runs were trained and compared:
 |---|---|---|---|---|
 | Yeshita (ablation) | Qwen2.5-Coder-7B-Instruct | 8 | 0.538 | 88.2% (15/17) |
 | Faiza (primary, checkpoint-36) | Qwen2.5-Coder-7B-Instruct | 32 | 0.495 | 87.5% |
-| Sakshi (secondary experiment) | Llama-3.1-8B-Instruct | 4 | [Sakshi's number] | [Sakshi's number] |
+| Sakshi (secondary experiment) | Llama-3.1-8B-Instruct | 4 | 1.022 | 31.2% |
+
+
+Sakshi's Llama3.1-8B experiment used a different base model to test whether pass@1
+generalizes across architecture, not just rank. Only 1 epoch completed (each training
+step took ~5 minutes on 6GB VRAM with this larger model, versus seconds for the 7B
+Qwen runs), so this checkpoint has no epoch-over-epoch comparison — it's the sole,
+official result for this track. The substantially lower pass@1 (31.2% vs ~87-88% for
+the Qwen-based runs) is likely attributable to the single-epoch training limit rather
+than a fundamental Llama3.1 vs Qwen2.5-Coder capability gap — Qwen2.5-Coder is
+code-specialized, while Llama3.1-8B-Instruct is general-purpose, and one epoch on 139
+examples is a light training budget for a larger, non-code-specialized base model. See
+`docs/base_model_comparison.md` for Sakshi's full analysis.
 
 All three configurations converged to nearly identical pass@1 (~87-88%) despite differing
 rank, base model, and hardware — strong evidence the dataset-size ceiling, not training
