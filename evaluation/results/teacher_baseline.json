@@ -1,0 +1,110 @@
+[
+  {
+    "id": "humaneval_113",
+    "passed": true,
+    "latency": 120.59210896492004,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_29",
+    "passed": true,
+    "latency": 31.845038175582886,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_25",
+    "passed": true,
+    "latency": 62.53301024436951,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_144",
+    "passed": true,
+    "latency": 35.36008620262146,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_68",
+    "passed": true,
+    "latency": 23.337509155273438,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_71",
+    "passed": true,
+    "latency": 30.99367618560791,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_89",
+    "passed": true,
+    "latency": 19.251861333847046,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_143",
+    "passed": true,
+    "latency": 58.118671894073486,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_139",
+    "passed": true,
+    "latency": 38.37515735626221,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_124",
+    "passed": true,
+    "latency": 59.8416166305542,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_155",
+    "passed": true,
+    "latency": 29.69890856742859,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_4",
+    "passed": true,
+    "latency": 51.886046409606934,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_27",
+    "passed": true,
+    "latency": 24.66909623146057,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_34",
+    "passed": true,
+    "latency": 30.773227214813232,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_43",
+    "passed": true,
+    "latency": 32.43209958076477,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_67",
+    "passed": true,
+    "latency": 38.536911487579346,
+    "retries": 0
+  },
+  {
+    "id": "mbpp_177",
+    "passed": true,
+    "latency": 37.88661170005798,
+    "retries": 0
+  },
+  {
+    "id": "humaneval_157",
+    "passed": true,
+    "latency": 40.303773164749146,
+    "retries": 0
+  }
+]

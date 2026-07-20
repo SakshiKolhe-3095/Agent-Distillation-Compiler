@@ -24,7 +24,7 @@ adc/
 logs/
 results.json
 wandb/
-evaluation/results/
+evaluation/results/*
 
 # W&B
 *.log
@@ -41,3 +41,4 @@ training/checkpoints/
 models/*
 !models/qlora-primary-final-metadata.json
 !models/router.pkl
+!evaluation/results/teacher_baseline.json
