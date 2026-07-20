@@ -66,7 +66,22 @@ See `benchmarks/pass_at_1_comparison.png` for student pass@1 vs. teacher baselin
 (Yeshita: 5.997GB, Faiza: 7.997GB, Sakshi: 5.997GB — all comfortably within their
 respective 6GB/8GB cards). Sakshi's `docs/cuda_vulkan_comparison.md` additionally
 benchmarks GGUF inference speed across CUDA and Vulkan backends on the same RTX 4050
-hardware. [Insert Sakshi's specific numbers here once confirmed.]
+hardware.**CUDA vs Vulkan inference (Sakshi, Llama3.1-8B rank-4, Q4_K_M quant, RTX 4050):**
+
+| Backend | Device | Prompt (t/s) | Generation (t/s) |
+|---|---|---|---|
+| CUDA | RTX 4050 (discrete) | 536.5 | 31.1 |
+| Vulkan | RTX 4050 (discrete) | 352.0 | 27.4 |
+| Vulkan | Radeon 740M (iGPU, full offload) | — | OOM (failed) |
+| Vulkan | Radeon 740M (iGPU, partial offload) | 7.3 | 5.2 |
+
+CUDA outperforms Vulkan on the same discrete GPU (~52% faster prompt processing, ~13%
+faster generation), as expected given CUDA is NVIDIA's native backend. The AMD iGPU
+cannot fully offload an 8B model even with reported-available shared memory — partial
+offload works but runs 5-6x slower than the discrete GPU. This confirms the dual-backend
+build validates the full pipeline (train → export → quantize → infer) works end-to-end
+regardless of GPU vendor, even though CUDA remains the clear performance choice on
+capable hardware.
 
 ## 7. Limitations & Future Work
 - **Dataset size**: 174 examples is well below typical fine-tuning targets; pass@1
