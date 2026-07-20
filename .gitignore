@@ -12,7 +12,7 @@ adc/
 .env
 
 # Model artifacts
-models/
+
 *.gguf
 *.safetensors
 
@@ -37,4 +37,6 @@ unsloth_compiled_cache/
 
 training/checkpoints/
 
-models/
+
+models/*
+!models/qlora-primary-final-metadata.json
