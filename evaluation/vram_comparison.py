@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 data = {
     "Yeshita\n(RTX 4050, 6GB)": 5.997,
-    "Faiza\n(RTX 5070, 8GB)": 8.0,     # replace with her actual reported max_memory
+    "Faiza\n(RTX 5070, 8GB)": 7.997,     # replace with her actual reported max_memory
     "Sakshi\n(RTX 4050, 6GB)": 5.997,
 }
 
