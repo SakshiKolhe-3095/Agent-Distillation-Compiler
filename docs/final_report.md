@@ -116,3 +116,14 @@ numerous subtle bugs in trajectory verification along the way, several of which
 (silent pytest false-positives, Windows-specific training crashes) would have gone
 unnoticed without close manual verification — a genuine finding in its own right about
 the importance of validating automated pipelines rather than trusting green checkmarks.
+
+
+## DPO Alignment (Yeshita, Week 7)
+- Base: Yeshita's ablation checkpoint (rank 8) → DPO with 97 preference pairs
+- Final checkpoint: models/qlora-primary-dpo/checkpoint-7 (local, gitignored)
+- rewards/accuracies: 0.225 → 0.588 (model markedly more consistent at preferring correct code)
+- mean_token_accuracy: 0.839 → 0.847
+- train_loss: 0.673 (final)
+- Note: post-DPO pass@1 re-evaluation attempted but blocked by a local environment issue
+  (checkpoint load silently hung, no traceback) — training metrics above are from the
+  trainer's own logged output during the run itself.
