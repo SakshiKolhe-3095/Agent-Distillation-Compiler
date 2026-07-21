@@ -1,5 +1,9 @@
 # Agent Distillation Compiler
 
+![CI](https://github.com/YeshitaMotwani/Agent-Distillation-Compiler/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+
 A multi-agent pipeline (Planner -> Coder -> Sandbox Tester -> Debugger) used
 to generate coding-problem trajectories from teacher LLMs, distilled into a
 smaller student model via QLoRA fine-tuning.
@@ -58,3 +62,20 @@ visible on one shared dashboard for direct comparison.
 - `training/` -- QLoRA training scripts + shared W&B config
 - `docs/` -- architecture, dataset reports, training notes
 - `docker_configs/` -- sandbox Docker image definition
+
+## Benchmarks
+
+Final results from the primary QLoRA student model (Qwen2.5-Coder-7B,
+rank 32, 4-bit) after SFT + DPO alignment:
+
+| Metric | Value |
+|---|---|
+| Val pass@1 (SFT) | 87.5% (14/16) |
+| DPO rewards/accuracies | 0.225 → 0.588 |
+| Training data | 174 passing trajectories (139/17/18 split) |
+
+Three independently trained configs (rank-32 primary, rank-8 ablation,
+Llama3.1-8B experiment) converged to a similar ~87-88% pass@1 ceiling.
+
+Full details: `docs/model_card.md`, `docs/training_guide.md`,
+`docs/dpo_alignment_results.md`.
