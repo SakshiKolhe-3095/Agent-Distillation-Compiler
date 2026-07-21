@@ -1,0 +1,8 @@
+models/
+wandb/
+unsloth_compiled_cache/
+datasets/raw/
+.env
+__pycache__/
+*.pyc
+evaluation/results/
